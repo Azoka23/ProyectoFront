@@ -1,0 +1,27 @@
+body{
+    background-image: url("/Static/imagenes/pexels-sindre-fs-1106416.jpg");
+            background-repeat: no-repeat;
+            width: 100%;
+}
+
+/* Estilos generales para etiquetas y campos de entrada */
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+}

@@ -1,7 +1,11 @@
 body{
-    background-image: url("/Static/imagenes/pexels-sindre-fs-1106416.jpg");
+    background-color:#FDF0D5;
             background-repeat: no-repeat;
             width: 100%;
+}
+
+h1{
+    color:#780000;
 }
 
 /* Estilos generales para etiquetas y campos de entrada */
@@ -17,11 +21,30 @@ input[type="number"],
 input[type="email"],
 input[type="date"],
 input[type="password"],
+input[type="submit"],
 select {
     width: 200px;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 2px solid #003049;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 8px;
 }
+
+input[type="submit"]:hover {
+    background-color: #457B9D;
+    border: 2px solid #003049; /* Añadimos el borde solo cuando se pasa el mouse sobre el botón */
+    
+}
+
+input[type="submit"] {
+    width: 200px; /* Ancho fijo para el botón */
+    padding: 8px;
+    
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    float: center; /* Posición a la derecha */
+}
+
+

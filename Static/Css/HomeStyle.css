@@ -1,97 +1,93 @@
-
-
-
-/* Estilo para el fondo */
-body {
-    background-color: rgb(233, 135, 201); /* Color de fondo inicial */
-    animation: cambioColor 10s infinite alternate; /* Animación de cambio de color */
+.container{
+    display:grid;
+    /* grid-template:filas/columnas */
+    grid-template:100px 1fr 100px/400px 1fr;
+    grid-template-areas:"header header"
+                        "left contenido"
+                        "footer footer "  ;
+   grid-gap:10px;
+   height:100vh;
+}
+.header{
+    grid-area:header;
 }
 
-/* Definición de la animación */
-@keyframes cambioColor {
-    0% { background-color: rgb(169, 230, 242); } /* Color inicial */
-    25% { background-color: rgb(172, 209, 239); } /* Primer color pastel */
-    50% { background-color: rgb(152, 177, 202); } /* Segundo color pastel */
-    75% { background-color: rgb(231, 210, 247); } /* Tercer color pastel */
-    100% { background-color: rgb(119, 127, 155); } /* Volver al color inicial */
+.left{
+    grid-area:left;
+    
 }
 
-/* Estilos para el contenedor de imágenes */
+
+.footer{
+    grid-area:footer;
+    
+}
+
+.footer-content {
+    text-align: center;
+    
+}
+
+
+.item{
+    background-color:#8D99AE;
+    padding: 10px;
+    color: #003049;
+    border-radius:0dvh10px;
+}
+
+.titulo {
+    text-align: center;
+    font-size:20px;
+}
+
+.boton-iniciar-sesion {
+    /* Estilos del botón */
+    padding: 8px 16px;
+    background-color: #669BBC;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Agrega una transición para suavizar el cambio */
+
+    /* Estilos adicionales para la animación */
+    display: inline-block;
+}
+
+/* Regla para la animación al pasar el mouse */
+.boton-iniciar-sesion:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+    background-color: #003049; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+
+
+.contenido {
+    grid-area: contenido;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 0 10px; /* Agrega un poco de espacio a los lados */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
 .image-container {
     display: flex;
-    overflow-x: auto; /* Permite el desplazamiento horizontal */
-    scroll-snap-type: x mandatory; /* Hace que las imágenes se detengan en el borde */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas */
+    gap: 10px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    max-width: 100%; /* Se ajusta al ancho máximo del contenedor padre */
 }
 
 /* Estilos para las imágenes */
 .image-container img {
-    flex: 0 0 auto; /* No crecerán ni se reducirán */
-    width: 25%; /* Ancho máximo */
-    scroll-snap-align: start; /* Alinea las imágenes al comienzo del contenedor */
+    flex: 0 0 calc(50% - 10px); /* Ancho máximo para que quepan dos imágenes por fila, considerando el espacio entre ellas */
+    max-width: 200px; /* Ancho máximo del 50% para que se ajusten al contenedor */
+    height: auto; /* Mantiene la proporción del ancho/altura de la imagen */
+    margin-bottom: 10px; /* Espacio inferior entre las imágenes */
 }
-
-
-/* Estilos para el footer */
-footer {
-    background-color: #333; /* Color de fondo del footer */
-    color: white; /* Color del texto en el footer */
-    padding: 20px; /* Espaciado interno del footer */
-}
-
-/* Estilos para los párrafos dentro del footer */
-footer p {
-    color: rgb(242, 234, 234) !important; /* Color del texto en los párrafos del footer */
-}
-
-
-
-h1 {
-    text-align: center;
-    color: rgb(235, 40, 124);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra con desplazamiento */
-    animation: dance 3s infinite alternate; /* Animación de baile */
-}
-
-@keyframes dance {
-    0%, 100% {
-        transform: translateX(0) scale(1); /* Posición y tamaño inicial y final */
-    }
-    50% {
-        transform: translateX(20px) scale(1.2); /* Movimiento hacia adelante y agrandamiento */
-    }
-}
-
-
-h1::after {
-    content: '⭐️';
-}
-
-
-
-h2{
-    text-align: left;
-    color:rgb(56, 158, 242);
-}
-/* Estilos para los botones */
-.boton input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #1976d3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-    margin: 5px;
-    transition: background-color 0.3s ease, border 0.3s ease; /* Agregamos la transición para el cambio de color de fondo y el borde */
-}
-
-.boton input[type="submit"]:hover {
-    background-color: #45a049;
-    border: 2px solid; /* Añadimos el borde solo cuando se pasa el mouse sobre el botón */
-}
-
- 
-
 
 
 

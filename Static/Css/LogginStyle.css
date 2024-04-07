@@ -1,0 +1,53 @@
+/* Estilos adicionales para los elementos del formulario */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+}
+
+body{
+    background: #FDF0D5;
+}
+h1{
+    color:#780000;
+}
+
+input[type="text"],
+input[type="password"],
+button[type="submit"] {
+    width: 250px;
+    padding: 10px;
+    border: 2px solid #003049;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color:#669BBC;
+    color: #FDF0D5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #457B9D;
+}
+
+/* Otros estilos */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color:FDF0D5;
+}
+
+
+p {
+    text-align: center;
+}

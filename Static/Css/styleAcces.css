@@ -1,0 +1,148 @@
+
+.container{
+    background-color: #E5E5E5; /* Color de respaldo */
+    background-image:radial-gradient(circle, #E5E5E5,#457B9D);
+    display:grid;
+    /* grid-template:filas/columnas */
+    grid-template:100px 1fr 100px/400px 1fr;
+    grid-template-areas:"header header"
+                        "left contenido"
+                        "footer footer "  ;
+   grid-gap:20px;
+   height:100vh;
+   
+}
+
+
+/*Aca esta todo el css del header*/
+.header{
+    grid-area:header;
+    .titulo {
+        text-align: center;
+        font-size:30px;
+        color: #780000;
+    }
+
+.icono-usuario {
+    width: 30px; /* Ancho del contenedor del icono */
+    height: 30px; /* Altura del contenedor del icono */
+    margin-right: 10px; /* Espacio a la derecha del icono */
+}
+
+.icono-usuario img {
+    width: 100%; /* Ancho del icono */
+    height: auto; /* Altura automática */
+
+margin-top: -20;}
+
+
+.nombre-usuario {
+    font-size: 16px; /* Tamaño de fuente del nombre de usuario */
+    font-weight: bold; /* Estilo de fuente en negrita */
+margin-top: -5px;
+color:#003049;
+}
+
+.usuario-container {
+    display: flex; /* Alinear elementos horizontalmente */
+    
+    align-items: center; /* Centrar verticalmente */
+}
+
+.item.header nav {
+    display: flex; /* Utilizamos flexbox para alinear los elementos horizontalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centramos verticalmente */
+flex-direction: column;
+}
+
+.boton-iniciar-sesion {
+    /* Estilos del botón */
+    padding: 8px 16px;
+    background-color: #669BBC;
+    color: #FDF0D5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Agrega una transición para suavizar el cambio */
+
+    /* Estilos adicionales para la animación */
+    display: inline-block;
+}
+
+/* Regla para la animación al pasar el mouse */
+.boton-iniciar-sesion:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+    background-color: #003049; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+.boton-cerrar-sesion {
+    /* Estilos del botón */
+    padding: 8px 16px;
+    background-color: #669BBC;
+    color: #FDF0D5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Agrega una transición para suavizar el cambio */
+
+    /* Estilos adicionales para la animación */
+    display: inline-block;
+}
+/* Regla para la animación al pasar el mouse */
+.boton-cerrar-sesion:hover { 
+    transform: scale(1.1);   /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+    background-color: #003049; /* Cambia el color de fondo al pasar el mouse */
+} 
+
+
+
+}
+
+/*aca esta el css de toda la seccion de contenido*/
+.contenido{
+    grid-area:contenido;
+    
+
+}
+
+/*aca esta todo el css de la seccion izquierda*/
+.left{
+    grid-area:left;
+    
+}
+
+/*aca esta todo el css del  footer*/
+.footer{
+    grid-area:footer;
+    .footer-content {
+        text-align: center;
+        
+    }
+}
+
+
+/*aca esta el css de todos los items (hijos) de mi grid (heaser,left,contenido,footer)*/
+.item{
+    background-color:transparent;
+    padding: 10px;
+    color: #003049;
+    border-radius:0dvh10px;
+}
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+

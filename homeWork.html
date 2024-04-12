@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/Static/imagenes/cinema_12223.ico">
+    <link rel="stylesheet" href="/Static/Css/styleAcces.css">
+</head>
+
+<body>
+
+    <!-- armo el contenedor general de la pagina -->
+    <section class="container">
+
+        <div class="item header">
+            <nav>
+
+                <!-- Aquí mostraremos el nombre de usuario junto al icono -->
+                <div class="usuario-container">
+                    <!-- Aquí mostraremos el icono de usuario -->
+                    <div id="icono-usuario" class="icono-usuario hidden">
+                        <img src="/Static/Imagenes/avatardefault_92824.ico" alt="Icono Usuario">
+                    </div>
+                    <!-- Aquí mostraremos el nombre de usuario -->
+                    <div id="nombre-usuario" class="nombre-usuario"></div>
+                </div>
+
+
+                <!-- boton cierre sesion -->
+                <div class="bot-container">
+                    <a href="/homeAcces.html">
+                        <input type="submit" value="Cerrar sesion" class="boton-cerrar-sesion">
+                    </a> 
+                </div>
+
+                <!-- Contenedor para el título principal -->
+                <div class="titulo-container">
+                    <h1 class="titulo">Eventos musicales</h1>
+                </div>
+        </div>
+
+        <div class="item left">
+
+            <!--  aca agregamos lo que va en la columna de la izquierda -->
+        </div>
+
+
+
+        <div class="item contenido">
+
+            <!-- aca agregamos lo que aparece en contenidos a la derecha -->
+
+        </div>
+
+        <div class="item footer">
+            <div class="footer-content">
+                <p>Derechos Registrados</p>
+                <p>argentina @</p>
+            </div>
+        </div>
+    </section>
+
+    <!--  script que maneja la funcionalidad de mostrar el nombre de usuario y el icono -->
+    <script src="/Static/Js/nombreUsuario.js"></script>
+
+
+    
+
+
+
+</body>
+
+</html>

@@ -11,8 +11,10 @@
         <h1>Iniciar Sesión</h1>
     </header>
     <main>
-        <form action="/login" method="post">
-            <div class="input-group">
+        <!-- <form action="/login" method="post">
+            <div class="input-group"> -->
+                <form id="login-form" action="/homeWork.html" method="post">
+                    <div class="input-group">
                 <label for="username">Usuario:</label>
                 <input type="text" id="username" name="username" placeholder="Ingresa tu nombre de usuario" required>
             </div>
@@ -24,9 +26,9 @@
                 <button type="submit">Ingresar</button>
             </div>
         </form>
-        <p> Olvidaste tu contraseña? <a href="/Templates/register.html">Recuperala  aquí</a>.</p></p>
+        <p> Olvidaste tu contraseña? <a href="/Templates/register.html">Recuperala  aquí</a>.</p>
         <p>¿No tienes una cuenta? <a href="/Templates/register.html">Regístrate aquí</a>.</p>
     </main>
-    
+    <script src="/Static/js/validacionInicioSesion.js"></script>
 </body>
 </html>

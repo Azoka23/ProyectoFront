@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="shortcut icon" href="/Static/imagenes/cinema_12223.ico">
-    <link rel="stylesheet" href="/Static/Css/HomeStyle.css">
+    <link rel="stylesheet" href="/Static/Css/styleAcces.css">
 </head>
 <body>
+
+    
     <!-- armo el contenedor general de la pagina -->
     <section class="container">
+
 <div class="item header">
     <nav>
-        <h1 class="titulo">Eventos musicales</h1>
+        <h1 class="titulo">Eventos culturales</h1>
+        
         <!-- boton inicio sesion -->
         <div class="boton-container">
-            <a href="/Templates/loggin.html" >
+            <a href="/Templates/login.html" >
                 <input type="submit" value="Iniciar sesion" class="boton-iniciar-sesion">
             </a>
         </div>
@@ -24,7 +28,20 @@
 
 <div class="item left">
     
-<!--  aca agregamos lo que va en la columna de la izquierda -->
+    <div class="item left">
+        <!-- Widget de fecha -->
+        <div class="widget">
+            <h2>Hoy es... </h2>
+            <p id="fecha"></p>
+        </div>
+        
+        <!-- Widget de información sobre la página -->
+        <div class="widget">
+            <h2>Información de la página</h2>
+            <p>Esta página proporciona información sobre...</p>
+        </div>
+    </div>
+    
 </div>
 
 
@@ -43,6 +60,12 @@
     </div>
 </div>
     </section>
+
+    /*script para mostar la fecha actualizada*/
+
+   
+ <script src="/Static/Js/fechaActual.js"></script>
+
 
 
 </body>

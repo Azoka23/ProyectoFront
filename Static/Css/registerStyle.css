@@ -23,13 +23,18 @@ input[type="date"],
 input[type="password"],
 input[type="submit"],
 select {
-    width: 200px;
+    width: 100%;
+    max-width:300px;
     padding: 8px;
     border: 2px solid #003049;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 8px;
+    margin-bottom: 8px; /* Añadido para un mejor espaciado */
+    margin-left: auto; /* Centrar los campos de entrada */
+    margin-right: auto; /* Centrar los campos de entrada */
 }
+
 
 input[type="submit"]:hover {
     background-color: #457B9D;
@@ -47,4 +52,56 @@ input[type="submit"] {
     float: center; /* Posición a la derecha */
 }
 
+/* Estilos para dispositivos pequeños (hasta 767px) */
+@media screen and (max-width: 767px) {
+    /* Ajustes para los elementos del formulario */
+    label {
+        display: block;
+        width: auto;
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="date"],
+    input[type="password"],
+    input[type="submit"],
+    select {
+        width: calc(100% - 20px); /* Resta 20px para tener un pequeño margen a los lados */
+        max-width: 300px; /* Ajusta este valor según lo que consideres apropiado */
+        padding: 8px;
+        border: 2px solid #003049;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 8px;
+        margin-bottom: 8px; /* Añadido para un mejor espaciado */
+        margin-left: auto; /* Centrar los campos de entrada */
+        margin-right: auto; /* Centrar los campos de entrada */
+    }
+
+    input[type="submit"] {
+        margin-top: 20px;
+        width: calc(100% - 20px); /* Resta 20px para tener un pequeño margen a los lados */
+    }
+}
+
+
+/* Estilos para dispositivos medianos (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Ajustes para el encabezado */
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* Estilos para dispositivos grandes (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+    /* Ajustes para el encabezado */
+    h1 {
+        font-size: 36px;
+    }
+}
 

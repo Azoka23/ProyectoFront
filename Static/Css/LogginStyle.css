@@ -51,3 +51,50 @@ header {
 p {
     text-align: center;
 }
+
+
+/* Estilos para dispositivos pequeños (hasta 767px) */
+@media screen and (max-width: 767px) {
+    /* Ajustes para el encabezado */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Ajustes para los elementos del formulario */
+    .input-group label {
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+        width: 100%;
+        padding: 8px;
+        border: 2px solid #003049;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        margin-top: 20px;
+    }
+}
+
+/* Estilos para dispositivos medianos (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Ajustes para el encabezado */
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* Estilos para dispositivos grandes (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+    /* Ajustes para el encabezado */
+    h1 {
+        font-size: 36px;
+    }
+}

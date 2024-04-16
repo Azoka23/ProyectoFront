@@ -10,8 +10,15 @@
                         "footer footer "  ;
    grid-gap:20px;
    height:100vh;
+   padding: 20px;
    
+    background-size: cover;
+    background-attachment: fixed; /* Cambiar el modo de fijación del fondo */
+    background-position: center; /* Ajustar la posición del fondo */
+    overflow: auto; /* Permitir el desplazamiento del contenedor si el contenido es grande */
 }
+
+
 
 
 /*Aca esta todo el css del header*/
@@ -19,7 +26,7 @@
     grid-area:header;
     .titulo {
         text-align: center;
-        font-size:30px;
+        font-size:2rem;
         color: #780000;
     }
 
@@ -33,11 +40,11 @@
     width: 100%; /* Ancho del icono */
     height: auto; /* Altura automática */
 
-margin-top: -20;}
+margin-top: -20px;}
 
 
 .nombre-usuario {
-    font-size: 16px; /* Tamaño de fuente del nombre de usuario */
+    font-size:1.6rem; /* Tamaño de fuente del nombre de usuario */
     font-weight: bold; /* Estilo de fuente en negrita */
 margin-top: -5px;
 color:#003049;
@@ -103,9 +110,23 @@ flex-direction: column;
 /*aca esta el css de toda la seccion de contenido*/
 .contenido{
     grid-area:contenido;
+        overflow-x: auto; /* Añade un desplazamiento horizontal si es necesario */
+        overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
+        white-space: nowrap; /* Evita que las imágenes se envuelvan a la siguiente línea */
+    
+}
+        .contenido img{
+            display: inline-block; /* Hace que las imágenes se muestren una al lado de la otra */
+            width: 100px; /* Ajusta el ancho de las imágenes según tu preferencia */
+            height: 100px; /* Ajusta el alto de las imágenes según tu preferencia */
+            border-radius: 50px; /* Convierte las imágenes en círculos */
+            margin-right: 10px; /* Espacio entre las imágenes */
+        margin-top: 80px;
+        }
     
 
-}
+
+ 
 
 /*aca esta todo el css de la seccion izquierda*/
 .left{
@@ -128,13 +149,72 @@ flex-direction: column;
     background-color:transparent;
     padding: 10px;
     color: #003049;
-    border-radius:0dvh10px;
+    border-radius:0 10px;
 }
 
 
 
+/* Estilos para dispositivos pequeños (hasta 767px) */
+@media screen and (max-width: 767px) {
+    /* Ajustes para el encabezado */
+    .titulo {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .boton-iniciar-sesion,
+    .boton-cerrar-sesion {
+        padding: 0.5rem 1rem; /* Corrección del valor de padding */
+        font-size: 1rem;
+    }
 
- 
+    /* Ajustes para el grid */
+    .container {
+        grid-template:
+            "header header"
+            "left left"
+            "contenido contenido"
+            "footer footer";
+    }
+
+   
+    .contenido img {
+        width: 80px;
+        height: 80px;
+        margin-top: 60px; /* Corrección del valor de margin-top */
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* Estilos para dispositivos medianos (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Ajustes para el encabezado */
+    .titulo {
+        font-size: 2rem;
+    }
+  
+    /* Ajustes para la columna izquierda */
+    .left .widget {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para dispositivos grandes (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+    /* Ajustes para el encabezado */
+    .titulo {
+        font-size: 3rem;
+    }
+  
+    /* Ajustes para el contenido */
+    .contenido img {
+        width: 120px;
+        height: 120px;
+        margin-top: 80px;
+    }
+}
+
 
 
 

@@ -1,4 +1,8 @@
 /* Estilos adicionales para los elementos del formulario */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .input-group {
     display: flex;
     flex-direction: column;

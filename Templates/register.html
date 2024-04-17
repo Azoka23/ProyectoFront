@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="/Static/Css/registerStyle.css">
+    <!-- Agrega el enlace a la fuente Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
-   
 
 </head>
 
@@ -21,83 +22,91 @@
 
         </nav>
     </header>
-    <main>
-        <section>
+    <main >
+        <section id="register-form">
             <!-- a donde envio el formulario -->
-            <form action="https...." method="get">
+            <form action="/Templates/formularioRegistro/" method="get" id="register-form" novalidate>
                 <!-- get hace que los datos se agreguen 
 y sean visibles,sirve para busquedas , 
 para contraseñas o info importante se usa el POST-->
 
 
-                <div >
-                    <!-- repito los label que necesite para
+
+                <!-- repito los label que necesite para
     campo del registro -->
-    
 
+
+                <div>
                     <label for="">Apellido</label>
-                    <input type="text" name="lasttname" id="lastname">
+                    <input type="text" name="lasttname" id="apellido">
 
                 </div>
                 <!-- <br> -->
-                <div >
+                <div>
                     <label for="">Nombre</label>
-                    <input type="text" name="firstname" id="firstname">
+                    <input type="text" name="firstname" id="nombre">
                 </div>
                 <!-- <br> -->
-                <div >
+                <div>
                     <label for="">Fecha de nacimiento</label>
-                    <input type="date" name="birthdayDate" id="birthdayDate">
+                    <input type="date" name="birthdayDate" id="fecha de nacimiento">
                 </div>
                 <!-- <br> -->
-                <div >
+                <div>
                     <label for="">Documento </label>
-                    <input type="number" name="id" id="id">
+                    <input type="number" name="id" id="documento">
 
                 </div>
                 <!-- <br> -->
-                <div >
+                <div>
                     <label for="">Telefono</label>
-                    <input type="number" name="phone" id="phone">
+                    <input type="number" name="phone" id="telefono" >
                 </div>
                 <!-- <br> -->
-                <div >
+                <div>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" >
                 </div>
                 <!-- <br> -->
 
-                <div >
+                <div>
                     <!-- repito los label que necesite para
         campo del registro -->
-        <label for="country">País de origen</label>
+                    <label for="country">País de origen</label>
 
-                        <select name="country" id="country">
-                            <!-- el primero va vacio para obligar a elegir -->
-                            <option value="">seleccione</option>
-                            <option value="Ar">Argentina</option>
-                            <option value="Bo">Bolivia</option>
-                            <option value="Uy">Uruguay</option>
-                            <option value="Pe">Peru</option>
-                            <option value="Br">Brasil</option>
-                        </select>
+                    <select name="country" id="pais de origen">
+                        <!-- el primero va vacio para obligar a elegir -->
+                        <option value="">seleccione</option>
+                        <option value="Ar">Argentina</option>
+                        <option value="Bo">Bolivia</option>
+                        <option value="Uy">Uruguay</option>
+                        <option value="Pe">Peru</option>
+                        <option value="Br">Brasil</option>
+                    </select>
 
-                    </label>
+                    
                 </div>
                 <!-- <br> -->
-                <div >
-                    
+                <div>
+
                     <label for="">Contraseña</label>
                     <input type="password" name="contraseña" id="contraseña">
                 </div>
-                
 
+                <div>
+                    <input type="checkbox" id="terms-checkbox" name="terms-checkbox"required >
+                    <label for="terms-checkbox">Acepto los términos y condiciones</label>
+                </div>
                 <!-- boton de envio -->
-                <input type="submit" value="Registrarse"class="sumbit-buttom"  >
+
+                <input type="submit" value="Registrarse" class="sumbit-buttom">
+                <!-- <img src="/Static/imagenes/actions_document_print_15785.png" alt="Impresion documento"> -->
 
             </form>
         </section>
     </main>
+
+    <script src="/Static/Js/validacionCampos.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,14 @@
-body{
-    background-color:#FDF0D5;
-            background-repeat: no-repeat;
-            width: 100%;
+body {
+
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #FDF0D5;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
-h1{
-    color:#780000;
+h1 {
+    color: #780000;
 }
 
 /* Estilos generales para etiquetas y campos de entrada */
@@ -24,36 +27,43 @@ input[type="password"],
 input[type="submit"],
 select {
     width: 100%;
-    max-width:300px;
+    max-width: 300px;
     padding: 8px;
     border: 2px solid #003049;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 8px;
-    margin-bottom: 8px; /* Añadido para un mejor espaciado */
-    margin-left: auto; /* Centrar los campos de entrada */
-    margin-right: auto; /* Centrar los campos de entrada */
+    margin-bottom: 8px;
+    /* Añadido para un mejor espaciado */
+    margin-left: auto;
+    /* Centrar los campos de entrada */
+    margin-right: auto;
+    /* Centrar los campos de entrada */
 }
 
 
 input[type="submit"]:hover {
     background-color: #457B9D;
-    border: 2px solid #003049; /* Añadimos el borde solo cuando se pasa el mouse sobre el botón */
-    
+    border: 2px solid #003049;
+    /* Añadimos el borde solo cuando se pasa el mouse sobre el botón */
+
 }
 
 input[type="submit"] {
-    width: 200px; /* Ancho fijo para el botón */
+    width: 200px;
+    /* Ancho fijo para el botón */
     padding: 8px;
-    
+
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 8px;
-    float: center; /* Posición a la derecha */
+    float: center;
+    /* Posición a la derecha */
 }
 
 /* Estilos para dispositivos pequeños (hasta 767px) */
 @media screen and (max-width: 767px) {
+
     /* Ajustes para los elementos del formulario */
     label {
         display: block;
@@ -70,27 +80,34 @@ input[type="submit"] {
     input[type="password"],
     input[type="submit"],
     select {
-        width: calc(100% - 20px); /* Resta 20px para tener un pequeño margen a los lados */
-        max-width: 300px; /* Ajusta este valor según lo que consideres apropiado */
+        width: calc(100% - 20px);
+        /* Resta 20px para tener un pequeño margen a los lados */
+        max-width: 300px;
+        /* Ajusta este valor según lo que consideres apropiado */
         padding: 8px;
         border: 2px solid #003049;
         border-radius: 4px;
         box-sizing: border-box;
         margin-top: 8px;
-        margin-bottom: 8px; /* Añadido para un mejor espaciado */
-        margin-left: auto; /* Centrar los campos de entrada */
-        margin-right: auto; /* Centrar los campos de entrada */
+        margin-bottom: 8px;
+        /* Añadido para un mejor espaciado */
+        margin-left: auto;
+        /* Centrar los campos de entrada */
+        margin-right: auto;
+        /* Centrar los campos de entrada */
     }
 
     input[type="submit"] {
         margin-top: 20px;
-        width: calc(100% - 20px); /* Resta 20px para tener un pequeño margen a los lados */
+        width: calc(100% - 20px);
+        /* Resta 20px para tener un pequeño margen a los lados */
     }
 }
 
 
 /* Estilos para dispositivos medianos (768px a 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+
     /* Ajustes para el encabezado */
     h1 {
         font-size: 28px;
@@ -99,9 +116,9 @@ input[type="submit"] {
 
 /* Estilos para dispositivos grandes (1024px en adelante) */
 @media screen and (min-width: 1024px) {
+
     /* Ajustes para el encabezado */
     h1 {
         font-size: 36px;
     }
 }
-

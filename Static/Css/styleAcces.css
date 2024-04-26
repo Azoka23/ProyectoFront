@@ -134,7 +134,7 @@ flex-direction: column;
 /*aca esta todo el css de la seccion izquierda*/
 .left{
     grid-area:left;
-    
+    /* completar para imagenes */
 }
 
 /*aca esta todo el css del  footer*/

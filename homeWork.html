@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boleteria Digital</title>
     <link rel="shortcut icon" href="/Static/imagenes/cinema_12223.ico">
     <link rel="stylesheet" href="/Static/Css/styleAcces.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
@@ -22,7 +22,7 @@
                 <div class="usuario-container">
                     <!-- Aquí mostraremos el icono de usuario -->
                     <div id="icono-usuario" class="icono-usuario hidden">
-                        <img src="/ProyectoFront/Static/Imagenes/avatardefault_92824.ico" alt="Icono Usuario">
+                        <img src="/Static/Imagenes/avatardefault_92824.ico" alt="Icono Usuario">
                     </div>
                     <!-- Aquí mostraremos el nombre de usuario -->
                     <div id="nombre-usuario" class="nombre-usuario"></div>
@@ -31,15 +31,20 @@
 
                 <!-- boton cierre sesion -->
                 <div class="bot-container">
-                    <a href="/ProyectoFront/homeAcces.html">
+                    <a href="/homeAcces.html">
                         <input type="submit" value="Cerrar sesion" class="boton-cerrar-sesion">
-                    </a> 
+                    </a>
                 </div>
 
                 <!-- Contenedor para el título principal -->
                 <div class="titulo-container">
-                    <h1 class="titulo">Eventos musicales</h1>
+                    <!-- <h1 class="titulo">Boleteria Digital</h1> -->
+                    <h1 class="titulo">
+                        <img src="/Static/Imagenes/Imagenes/BoleteriaDigital_logo.jpeg" alt="Icono"> Boleteria Digital
+                    </h1>
                 </div>
+                <div id="fecha"> </div>
+            </nav>
         </div>
 
         <div class="item left">
@@ -57,6 +62,11 @@
 
         <div class="item footer">
             <div class="footer-content">
+                <p>Seguinos en :
+                    <img src="/Static/imagenes/facebook_logo_icon_147291.ico" alt="logo 1">
+                    <img src="/Static/imagenes/instagram_logo_icon_181738.ico" alt="logo 2">
+                    <img src="/Static/imagenes/whatsapp_logo_icon_147205.ico" alt="logo 3">
+                </p>
                 <p>Derechos Registrados</p>
                 <p>argentina @</p>
             </div>
@@ -67,8 +77,11 @@
     <script src="/Static/Js/nombreUsuario.js"></script>
 
 
-    
 
+<!-- script para mostar la fecha actualizada -->
+
+
+<script src="/Static/js/fechaActual.js"></script>
 
 
 </body>

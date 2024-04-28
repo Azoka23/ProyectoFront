@@ -63,8 +63,24 @@ color:#003049;
     display: flex; /* Utilizamos flexbox para alinear los elementos horizontalmente */
     justify-content: space-between; /* Espacio entre los elementos */
     align-items: center; /* Centramos verticalmente */
-flex-direction: column;
+/* flex-direction: column; */
 }
+
+#fecha {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+
+.titulo img {
+    width: 30px; /* Ancho deseado para el icono */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+border-radius:50%;
+}
+
 
 .boton-iniciar-sesion {
     /* Estilos del botón */
@@ -113,29 +129,72 @@ flex-direction: column;
 /*aca esta el css de toda la seccion de contenido*/
 .contenido{
     grid-area:contenido;
-        overflow-x: auto; /* Añade un desplazamiento horizontal si es necesario */
+        overflow-x:auto; 
+        /* Añade un desplazamiento horizontal si es necesario */
         overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
-        white-space: nowrap; /* Evita que las imágenes se envuelvan a la siguiente línea */
+        white-space: nowrap; 
+        /* Evita que las imágenes se envuelvan a la siguiente línea */
     
 }
-        .contenido img{
-            display: inline-block; /* Hace que las imágenes se muestren una al lado de la otra */
-            width: 100px; /* Ajusta el ancho de las imágenes según tu preferencia */
-            height: 100px; /* Ajusta el alto de las imágenes según tu preferencia */
-            border-radius: 50px; /* Convierte las imágenes en círculos */
-            margin-right: 10px; /* Espacio entre las imágenes */
-        margin-top: 80px;
-        }
-    
+       /* Ajusta el espacio entre el título y las imágenes en ambas secciones */
+.section_musicales, .section_teatro {
+    margin-bottom: 0px;
+}
 
+/* Reducir el espacio entre el título y las imágenes en ambas secciones */
+.section_musicales h4, .section_teatro h4 {
+    margin-bottom: 5px;
+}
+
+/* Ajusta el tamaño y el espaciado de las imágenes */
+.contenido img {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+        
 
  
 
 /*aca esta todo el css de la seccion izquierda*/
-.left{
-    grid-area:left;
-    /* completar para imagenes */
-}
+
+   
+    .item.left {
+        grid-area: left;
+        margin-top: 40px; /* Agrega un margen superior de 20px */
+    }
+    
+    .item.left .iframe {
+        width: 100px; /* Ajusta el ancho del iframe según sea necesario */
+        height: 100px; /* Ajusta la altura del iframe según sea necesario */
+        border-radius: 10px; /* Agrega bordes redondeados */
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
+        overflow: hidden; /* Oculta cualquier contenido que sobresalga del iframe */
+        margin-bottom: 10px; /* Agrega espacio entre los iframes */
+        
+        transition: border-color 0.3s ease; /* Agrega una transición suave al cambio de color del borde */
+    }
+    
+    .item.left .iframe:last-child {
+        margin-bottom: 0; /* Elimina el margen inferior del último iframe para evitar espacio adicional */
+    }
+    
+    .item.left .iframe:hover {
+        border-color: #003049; /* Cambia el color del borde al pasar el cursor sobre el iframe */
+    }
+    
+    .item.left .iframe iframe {
+        width: 100%; /* Ajusta el ancho del iframe al 100% del contenedor */
+        height: 100%; /* Ajusta la altura del iframe al 100% del contenedor */
+        border: 2px solid transparent; /* Establece un borde transparente para que haya un borde alrededor del iframe */
+        transition: border-color 0.3s ease; /* Agrega una transición suave al cambio de color del borde */
+    }
+    
+   
+
 
 /*aca esta todo el css del  footer*/
 .footer{

@@ -43,7 +43,7 @@ function validarInicioSesion(event) {
         // }
 
         // Redireccionar a la página principal (homeGrid.html)
-        window.location.href = '/ProyectoFront/homeWork.html';
+        window.location.href = '/homeWork.html';
     } else {
         // Usuario o contraseña incorrectos
         alert('Usuario o contraseña incorrectos');

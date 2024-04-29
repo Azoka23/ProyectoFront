@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: 'Roboto', sans-serif;
     
     
@@ -9,21 +9,45 @@
 
 .title_faq{
     display: flex;
-    flex-direction:row;
-    background-color: #0b2545;
-    justify-content: space-evenly;
+    flex-direction:column;
+    
+    justify-content:center;
     align-items: center;
+
+    background-color: #E5E5E5; /* Color de respaldo */
+    background-image:radial-gradient(circle, #E5E5E5,#457B9D);
+    /* display:grid; */
    }
 
-.title_faq img{
+/* .title_faq img{
     width: 150px;
     height: 150px;
+} */
+
+.titulo img {
+    width: 30px; /* Ancho deseado para el icono */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+border-radius:50%;
 }
 
-.title_faq h3{
-    color: white;
-    font-family:"Monserrat", san serif;
+/* .title_faq h3{
+    color:#003049;
+    font-family:"Roboto", san serif;
     font-size: 2rem;
+} */
+
+.titulo{
+    color:#780000;
+    font-size:2rem;
+    font-family:"Roboto", san serif;
+
+}
+
+.subtitulo{
+    color:#003049;
+    font-family:"Roboto", san serif;
+    font-size: 1.5rem;
 }
 
 .boton-home {
@@ -51,21 +75,21 @@
 }
 
 .texto-faq{
-    color: black;
+    color: #457B9D;
 }
 .respuesta-faq label{
     display: block;
     padding: 20px;
     font-size: 20px;
-    background: #1c1c1c;
-    color: #fff;
+    background:#8D99AE;
+    color: #FDF0D5;
     cursor: pointer;
     margin-bottom: 2px;
     transition: all 300ms ease;
 }
 
 .respuesta-faq label:hover{
-    background: #2e2e2e;
+    background: #003049;
 }
 
 
@@ -90,7 +114,7 @@
 }
 
 
-.footer-content {
+/* .footer-content {
     margin-top: 20px;
     padding: 20px;
     bottom: 0;
@@ -103,4 +127,31 @@
     justify-content: space-between; 
     align-items: center; 
     flex-direction: row;
+} */
+
+.boton-inicio{
+    /* Estilos del botón */
+    padding: 8px 16px;
+    background-color: #669BBC;
+    color: #FDF0D5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s; /* Agrega una transición para suavizar el cambio */
+
+    /* Estilos adicionales para la animación */
+    display: inline-block;
+}
+/* Regla para la animación al pasar el mouse */
+.boton-inicio:hover { 
+    transform: scale(1.1);   /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+    background-color: #003049; /* Cambia el color de fondo al pasar el mouse */
+} 
+.footer{
+    grid-area:footer;
+    .footer-content {
+        text-align: center;
+        
+    }
 }

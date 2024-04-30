@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boleteria Digital</title>
     <link rel="shortcut icon" href="/Static/imagenes/cinema_12223.ico">
-    <link rel="stylesheet" href="/Static/Css/styleAcces.css">
+    <link rel="stylesheet" href="/Static/Css/styleWork.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 
@@ -31,7 +31,7 @@
 
                 <!-- boton cierre sesion -->
                 <div class="bot-container">
-                    <a href="/homeAcces.html">
+                    <a href="/Index.htl.html">
                         <input type="submit" value="Cerrar sesion" class="boton-cerrar-sesion">
                     </a>
                 </div>
@@ -47,17 +47,66 @@
             </nav>
         </div>
 
-        <div class="item left">
+        <!-- <div class="item left"> -->
 
             <!--  aca agregamos lo que va en la columna de la izquierda -->
+        <!-- </div> -->
+        <div class="item left">
+            <h2>Selecciona un evento</h2>
+            <form id="ticket-form">
+                <label for="event">Evento:</label>
+                <select id="event" name="event">
+                    <option value="evento1">Divididos</option>
+                    <option value="evento2">Teatro</option>
+                    <option value="evento3">Estelares</option>
+                    <!-- Agrega más opciones según los eventos disponibles -->
+                </select>
+                <label for="quantity">Cantidad de tickets:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <!-- <input type="submit" value="Comprar" class="boton-comprar"> -->
+                <button type="submit" id="comprar-btn">
+                    <img src="/Static/Imagenes/diagram-61_24456.ico" alt="Carrito de compras">
+                </button>
+                
+            </form>
+<br>
+            <!-- Agrega el contador de tickets vendidos -->
+<div id="contador-tickets">
+    <h3>Tickets Vendidos Hoy:</h3>
+    <p id="numero-tickets">0</p>
+</div>
         </div>
+        
 
 
-
-        <div class="item contenido">
+        <!-- <div class="item contenido"> -->
 
             <!-- aca agregamos lo que aparece en contenidos a la derecha -->
 
+        <!-- </div> -->
+        <div class="item contenido">
+            <h2>Eventos Disponibles</h2>
+            <div class="evento">
+                <h3>Recital</h3>
+                <p>Divididos</p>
+                <br>
+                <img src="/Static/Imagenes/Imagenes/recitales/divididos.png" alt="Evento 1">
+               
+                <p>Precio: $5000</p>
+            </div>
+            <div class="evento">
+                <h3>teatro</h3>
+                <p>algo de teatro</p>
+                <img src="/Static/Imagenes/Teatro/6619bae30cdb7.webp" alt="Evento 2">
+                <p>Precio: $6500</p>
+            </div>
+            <div class="evento">
+                <h3>recital</h3>
+                <p>estelares</p>
+                <img src="/Static/Imagenes/recitales/estelares_s.png" alt="Evento 3">
+                <p>Precio: $3500</p>
+            </div>
+            <!-- Agrega más divs .evento según los eventos disponibles -->
         </div>
 
         <div class="item footer">
@@ -83,7 +132,9 @@
 
 <script src="/Static/js/fechaActual.js"></script>
 
+<!-- contadorTickets -->
 
+<script src="/Static/js/contadorTickets.js"></script>
 </body>
 
 </html>

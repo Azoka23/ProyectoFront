@@ -60,10 +60,10 @@ color:#003049;
 }
 
 .item.header nav {
-    display: flex; /* Utilizamos flexbox para alinear los elementos horizontalmente */
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: center; /* Centramos verticalmente */
-/* flex-direction: column; */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+
 }
 
 #fecha {
@@ -75,9 +75,9 @@ color:#003049;
 
 
 .titulo img {
-    width: 30px; /* Ancho deseado para el icono */
-    height: auto; /* Altura automática para mantener la proporción */
-    margin-right: 10px; /* Espacio entre el icono y el texto */
+    width: 30px; 
+    height: auto; 
+    margin-right: 10px; 
 border-radius:50%;
 }
 
@@ -95,9 +95,7 @@ border-radius:50%;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: transform 0.3s; /* Agrega una transición para suavizar el cambio */
-
-    /* Estilos adicionales para la animación */
+    transition: transform 0.3s; 
     display: inline-block;
 }
 
@@ -108,8 +106,8 @@ border-radius:50%;
 }
 
 
-.boton-cerrar-sesion {
-    /* Estilos del botón */
+/* .boton-cerrar-sesion {
+    
     padding: 8px 16px;
     background-color: #669BBC;
     color: #FDF0D5;
@@ -117,16 +115,16 @@ border-radius:50%;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: transform 0.3s; /* Agrega una transición para suavizar el cambio */
+    transition: transform 0.3s;  */
 
-    /* Estilos adicionales para la animación */
-    display: inline-block;
+    
+    /* display: inline-block;
 }
-/* Regla para la animación al pasar el mouse */
+
 .boton-cerrar-sesion:hover { 
-    transform: scale(1.1);   /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
-    background-color: #003049; /* Cambia el color de fondo al pasar el mouse */
-} 
+    transform: scale(1.1);   
+    background-color: #003049; 
+}  */
 
 /* Estilos para el botón de preguntas frecuentes */
 .boton-faq {
@@ -154,10 +152,10 @@ border-radius:50%;
 .contenido{
     grid-area:contenido;
         overflow-x:auto; 
-        /* Añade un desplazamiento horizontal si es necesario */
-        overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
+        
+        overflow-y: hidden; 
         white-space: nowrap; 
-        /* Evita que las imágenes se envuelvan a la siguiente línea */
+        
     
 }
        /* Ajusta el espacio entre el título y las imágenes en ambas secciones */
@@ -185,7 +183,100 @@ border-radius:50%;
     margin-top: 5px;
 }
 
-        
+  /* Ajustes para el área de contenido */
+.contenido {
+    grid-area: contenido;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+/* .evento {
+    width: 30%; 
+    margin-bottom: 20px;
+    background-color: #FDF0D5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* .evento h3 {
+    margin-top: 0;
+    color: #003049;
+}
+
+.evento p {
+    margin-bottom: 10px;
+}
+
+.evento img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+    max-width: 1fr!important;
+    max-height: 1fr!important;
+} */
+
+
+
+/* Estilos para la barra de desplazamiento */
+.contenido::-webkit-scrollbar {
+    width: 1px; /* Ancho de la barra de desplazamiento */
+    background-color: transparent; /* Color de fondo */
+}
+
+/* Estilos para el pulgar de la barra de desplazamiento */
+.contenido::-webkit-scrollbar-thumb {
+    background-color: #457B9D; /* Color del pulgar */
+    border-radius: 10px; /* Radio de borde del pulgar */
+}
+
+
+.contenido img {
+    display: inline-block;
+    /* Hace que las imágenes se muestren una al lado de la otra */
+    width: 100px;
+    /* Ajusta el ancho de las imágenes según tu preferencia */
+    height: 100px;
+    /* Ajusta el alto de las imágenes según tu preferencia */
+    border-radius: 50px;
+    /* Convierte las imágenes en círculos */
+    margin-right: 10px;
+    /* Espacio entre las imágenes */
+    margin-top: 80px;
+    
+}
+
+.contenido h4{
+    /* Añade posicionamiento absoluto */
+     color:#003049;
+    position:sticky; /* Cambia a posicionamiento absoluto */
+    bottom: 80px; /* Ajusta este valor según la altura del texto */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* animacion de h4 */
+.contenido h4 {
+    overflow: hidden; /* Oculta el desbordamiento del texto */
+    white-space: nowrap; /* Evita que el texto se envuelva a la siguiente línea */
+    animation: scrollText 10s linear infinite; /* Aplica la animación al texto */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+      
 
  
 
@@ -227,6 +318,57 @@ border-radius:50%;
     
    
 
+
+/*aca esta todo el css de la seccion izquierda*/
+/* .left {
+    grid-area: left;
+    
+    h2{
+        color:#003049;
+    }
+
+}
+
+#contador-tickets {
+    background-color: #FDF0D5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #780000; 
+} */
+
+/* #contador-tickets h3 {
+    margin-top: 0;
+    color: #003049;
+} */
+
+/* #contador-tickets p {
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #457B9D;
+} */
+
+
+/* #comprar-btn img {
+    width: 30px; 
+    height: auto; 
+    transition: transform 0.3s; 
+}
+
+#comprar-btn img:hover {
+    transform: scale(1.2); 
+}
+
+#comprar-btn {
+    background-color: transparent; 
+    border:1px #780000; 
+} */
+
+/* #comprar-btn img {
+    width: 30px; 
+    height: auto; 
+} */
 
 /*aca esta todo el css del  footer*/
 .footer{

@@ -1,0 +1,409 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background-color: #E5E5E5;
+    /* Color de respaldo */
+    background-image: radial-gradient(circle, #E5E5E5, #457B9D);
+    display: grid;
+    /* grid-template:filas/columnas */
+    grid-template: 100px 1fr 400px/200px 1fr;
+    grid-template-areas: "header header"
+        "left contenido"
+        "footer footer ";
+    grid-gap: 20px;
+    height: 100vh;
+    padding: 20px;
+
+    background-size: cover;
+    background-attachment: fixed;
+    /* Cambiar el modo de fijación del fondo */
+    background-position: center;
+    /* Ajustar la posición del fondo */
+    overflow: auto;
+    /* Permitir el desplazamiento del contenedor si el contenido es grande */
+}
+
+
+
+
+/*Aca esta todo el css del header*/
+.header {
+    grid-area: header;
+
+    .titulo {
+        text-align: center;
+        font-size: 2rem;
+        color: #780000;
+    }
+
+    .icono-usuario {
+        width: 30px;
+        /* Ancho del contenedor del icono */
+        height: 30px;
+        /* Altura del contenedor del icono */
+        margin-right: 10px;
+        /* Espacio a la derecha del icono */
+    }
+
+    .icono-usuario img {
+        width: 100%;
+        /* Ancho del icono */
+        height: auto;
+        /* Altura automática */
+
+        margin-top: -20px;
+    }
+
+
+    .nombre-usuario {
+        font-size: 1.6rem;
+        /* Tamaño de fuente del nombre de usuario */
+        font-weight: bold;
+        /* Estilo de fuente en negrita */
+        margin-top: -5px;
+        color: #003049;
+    }
+
+    .usuario-container {
+        display: flex;
+        /* Alinear elementos horizontalmente */
+
+        align-items: center;
+        /* Centrar verticalmente */
+    }
+
+    .item.header nav {
+        display: flex;
+        /* Utilizamos flexbox para alinear los elementos horizontalmente */
+        justify-content: space-between;
+        /* Espacio entre los elementos */
+        align-items: center;
+        /* Centramos verticalmente */
+        flex-direction: column;
+    }
+
+    /* .boton-iniciar-sesion {
+        
+        padding: 8px 16px;
+        background-color: #669BBC;
+        color: #FDF0D5;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        display: inline-block;
+    } */
+
+    
+    /* .boton-iniciar-sesion:hover {
+        transform: scale(1.1);
+        background-color: #003049;
+        
+    } */
+
+
+    .boton-cerrar-sesion {
+        /* Estilos del botón */
+        padding: 8px 16px;
+        background-color: #669BBC;
+        color: #FDF0D5;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        /* Agrega una transición para suavizar el cambio */
+
+        /* Estilos adicionales para la animación */
+        display: inline-block;
+    }
+
+    /* Regla para la animación al pasar el mouse */
+    .boton-cerrar-sesion:hover {
+        transform: scale(1.1);
+        /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+        background-color: #003049;
+        /* Cambia el color de fondo al pasar el mouse */
+    }
+    #fecha {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .titulo img {
+        width: 30px; 
+        height: auto; 
+        margin-right: 10px; 
+    border-radius:50%;
+    }
+
+}
+
+
+/* Ajustes para el área de contenido */
+.contenido {
+    grid-area: contenido;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* Estilos para cada evento */
+.evento {
+    width: 30%; /* Ajusta el ancho según tus necesidades */
+    margin-bottom: 20px;
+    background-color: #FDF0D5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.evento h3 {
+    margin-top: 0;
+    color: #003049;
+}
+
+.evento p {
+    margin-bottom: 10px;
+}
+
+.evento img {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    height: auto;
+    border-radius:5px; 
+    /* max-width: 70px!important;
+    max-height: 70px!important; */
+}
+
+
+
+/* Estilos para la barra de desplazamiento */
+.contenido::-webkit-scrollbar {
+    width: 1px; /* Ancho de la barra de desplazamiento */
+    background-color: transparent; /* Color de fondo */
+}
+
+/* Estilos para el pulgar de la barra de desplazamiento */
+.contenido::-webkit-scrollbar-thumb {
+    background-color: #457B9D; /* Color del pulgar */
+    border-radius: 10px; /* Radio de borde del pulgar */
+}
+
+
+.contenido img {
+    display: inline-block;
+    /* Hace que las imágenes se muestren una al lado de la otra */
+    width: 100px;
+    /* Ajusta el ancho de las imágenes según tu preferencia */
+    height: 100px;
+    /* Ajusta el alto de las imágenes según tu preferencia */
+    /* border-radius: 50px; */
+    /* Convierte las imágenes en círculos */
+    margin-right: 10px;
+    /* Espacio entre las imágenes */
+    margin-top: 80px;
+    
+}
+
+.contenido h4{
+    /* Añade posicionamiento absoluto */
+     color:#457B9D;
+    position:sticky; /* Cambia a posicionamiento absoluto */
+    bottom: 80px; /* Ajusta este valor según la altura del texto */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* animacion de h4 */
+.contenido h4 {
+    overflow: hidden; /* Oculta el desbordamiento del texto */
+    white-space: nowrap; /* Evita que el texto se envuelva a la siguiente línea */
+    animation: scrollText 10s linear infinite; /* Aplica la animación al texto */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+/*aca esta todo el css de la seccion izquierda*/
+.left {
+    grid-area: left;
+    
+    h2{
+        color:#003049;
+    }
+
+}
+
+#contador-tickets {
+    background-color: #FDF0D5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #780000; 
+}
+
+#contador-tickets h3 {
+    margin-top: 0;
+    color: #003049;
+}
+
+#contador-tickets p {
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #457B9D;
+}
+
+
+#comprar-btn img {
+    width: 30px; /* Ancho inicial de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    transition: transform 0.3s; /* Agrega una transición suave */
+}
+
+#comprar-btn img:hover {
+    transform: scale(1.2); /* Escala la imagen al 120% al pasar el mouse sobre ella */
+}
+
+#comprar-btn {
+    background-color: transparent; 
+    border:1px #780000; 
+}
+
+#comprar-btn img {
+    width: 30px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Para mantener la proporción de la imagen */
+}
+
+/*aca esta todo el css del  footer*/
+.footer {
+    grid-area: footer;
+
+    .footer-content {
+        text-align: center;
+
+    }
+}
+
+
+/*aca esta el css de todos los items (hijos) de mi grid (heaser,left,contenido,footer)*/
+.item {
+    background-color: transparent;
+    padding: 10px;
+    color: #003049;
+    border-radius: 0 10px;
+}
+
+
+
+/* Estilos para dispositivos pequeños (hasta 767px) */
+@media screen and (max-width: 767px) {
+
+    /* Ajustes para el encabezado */
+    .titulo {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .boton-iniciar-sesion,
+    .boton-cerrar-sesion {
+        padding: 0.5rem 1rem;
+        /* Corrección del valor de padding */
+        font-size: 1rem;
+    }
+
+    /* Ajustes para el grid */
+    .container {
+        grid-template:
+            "header header"
+            "left left"
+            "contenido contenido"
+            "footer footer";
+    }
+   
+    
+    .contenido img {
+        width: 60px;
+        height: 60px;
+        margin-top: 0;
+        padding:0;
+        /* Corrección del valor de margin-top */
+        /* flex-wrap: wrap; */
+    } 
+   
+
+    .contenido::-webkit-scrollbar {
+        width: 5px; /* Ajusta el ancho de la barra de desplazamiento */
+    }
+}
+
+
+
+/* Estilos para dispositivos medianos (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Ajustes para el encabezado */
+    .titulo {
+        font-size: 2rem;
+    }
+
+    /* Ajustes para la columna izquierda */
+    .left .widget {
+        margin-bottom: 20px;
+    }
+
+    .contenido::-webkit-scrollbar {
+        width: 8px; /* Ajusta el ancho de la barra de desplazamiento */
+    }
+
+    /* Ajustes para el grid */
+    .container {
+        grid-template:
+            "header header"
+            "left left"
+            "contenido contenido"
+            "footer footer";
+    }
+}
+
+/* Estilos para dispositivos grandes (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+
+    /* Ajustes para el encabezado */
+    .titulo {
+        font-size: 3rem;
+    }
+
+    /* Ajustes para el contenido */
+    .contenido img {
+        width: 100px;
+        height: 100px;
+        margin-top: 80px;
+    }
+
+    .contenido::-webkit-scrollbar {
+        width: 12px; /* Ajusta el ancho de la barra de desplazamiento */
+    }
+
+    /* Ajustes para el grid */
+    .container {
+        grid-template:
+            "header header"
+            "left left"
+            "contenido contenido"
+            "footer footer";
+    }
+}

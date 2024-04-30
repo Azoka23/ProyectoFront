@@ -18,4 +18,6 @@ document.getElementById('register-form').addEventListener('submit', function(eve
         alert('Debes aceptar los términos y condiciones para continuar.');
         return;
     }
+    // Redirigir a la página guardaForm.html después de la validación exitosa
+    window.location.href = "/Templates/guardaForm.html";
 });

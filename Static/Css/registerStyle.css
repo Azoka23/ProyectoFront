@@ -61,6 +61,8 @@ input[type="submit"] {
     /* Posición a la derecha */
 }
 
+
+
 /* Estilos para dispositivos pequeños (hasta 767px) */
 @media screen and (max-width: 767px) {
 

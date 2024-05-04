@@ -1,0 +1,382 @@
+
+*{
+    box-sizing: border-box ;
+    margin: 0;
+    padding: 0    ;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    background-color: #E5E5E5; /* Color de respaldo */
+    background-image:radial-gradient(circle, #E5E5E5,#457B9D);
+    display:grid;
+    /* grid-template:filas/columnas */
+    grid-template:100px 1fr 100px/400px 1fr;
+    grid-template-areas:"header header"
+                        "left contenido"
+                        "footer footer "  ;
+   grid-gap:20px;
+   height:100vh;
+   /* padding: 20px; */
+   
+    background-size: cover;
+    background-attachment: fixed; /* Cambiar el modo de fijación del fondo */
+    background-position: center; /* Ajustar la posición del fondo */
+    overflow: auto; /* Permitir el desplazamiento del contenedor si el contenido es grande */
+}
+
+
+
+
+/*Aca esta todo el css del header*/
+.header{
+    grid-area:header;
+    .titulo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size:2rem;
+        color: #780000;
+    }
+
+    
+.icono-usuario {
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px; 
+}
+
+.icono-usuario img {
+    width: 100%; 
+    height: auto; 
+    margin-top: -20px;}
+
+
+.nombre-usuario {
+    font-size:1.6rem; 
+    font-weight: bold;
+    color:#003049;
+}
+
+.usuario-container {
+    display: flex; 
+    align-items: center; 
+}
+
+.item.header nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  
+}
+
+#fecha {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+
+.titulo img {
+    width: 80px; 
+    height: auto; 
+    margin-right: 10px; 
+border-radius:50%;
+}
+
+.boton-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    margin-top: 10px;
+}
+
+.boton-iniciar-sesion {
+    /* Estilos del botón */
+    padding: 8px 16px;
+    background-color: #669BBC;
+    color: #FDF0D5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s; 
+    display: inline-block;
+}
+
+/* Regla para la animación al pasar el mouse */
+.boton-iniciar-sesion:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+    background-color: #003049; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+
+/* Estilos para el botón de preguntas frecuentes */
+.boton-faq {
+    padding: 8px 16px;
+    background-color: #669BBC;
+    color: #FDF0D5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s; 
+    text-decoration: none; 
+    display: inline-block;
+}
+
+.boton-faq:hover {
+    transform: scale(1.1);
+    background-color: #003049;
+}
+
+
+}
+
+/*aca esta el css de toda la seccion de contenido*/
+.contenido{
+    grid-area:contenido;
+        /* overflow-x:auto; 
+        overflow-y: hidden; 
+        white-space: nowrap;  */
+        
+    
+}
+       /* Ajusta el espacio entre el título y las imágenes en ambas secciones */
+.section_musicales, .section_teatro {
+    margin-bottom: 20px;
+}
+
+/* Reducir el espacio entre el título y las imágenes en ambas secciones */
+.section_musicales h3{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+/* Reducir el espacio entre el título y las imágenes en ambas secciones */
+ .section_teatro h3 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* Ajusta el tamaño y el espaciado de las imágenes */
+.contenido img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    /* margin-right: 5px;
+    margin-top: 5px; */
+}
+
+  /* Ajustes para el área de contenido */
+.contenido {
+    grid-area: contenido;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; */
+}
+
+.item contenido{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+
+/* Estilos para la barra de desplazamiento */
+.contenido::-webkit-scrollbar {
+    width: 1px; /* Ancho de la barra de desplazamiento */
+    background-color: transparent; /* Color de fondo */
+}
+
+/* Estilos para el pulgar de la barra de desplazamiento */
+.contenido::-webkit-scrollbar-thumb {
+    background-color: #457B9D; /* Color del pulgar */
+    border-radius: 10px; /* Radio de borde del pulgar */
+}
+
+
+.contenido img {
+    display: inline-block;
+    /* Hace que las imágenes se muestren una al lado de la otra */
+    width: 100px;
+    /* Ajusta el ancho de las imágenes según tu preferencia */
+    height: 100px;
+    /* Ajusta el alto de las imágenes según tu preferencia */
+    border-radius: 50px;
+    /* Convierte las imágenes en círculos */
+    margin-right: 10px;
+    /* Espacio entre las imágenes */
+    margin-top: 10px;
+    
+}
+
+.contenido h4{
+    /* Añade posicionamiento absoluto */
+     color:#003049;
+    position:sticky; /* Cambia a posicionamiento absoluto */
+    bottom: 80px; /* Ajusta este valor según la altura del texto */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* animacion de h4 */
+.contenido h4 {
+    overflow: hidden; /* Oculta el desbordamiento del texto */
+    white-space: nowrap; /* Evita que el texto se envuelva a la siguiente línea */
+    animation: scrollText 10s linear infinite; /* Aplica la animación al texto */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+      
+
+ 
+
+/*aca esta todo el css de la seccion izquierda*/
+
+   
+    .item.left {
+        grid-area: left;
+        margin-top: 40px; /* Agrega un margen superior de 20px */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .item.left .iframe {
+        width: 100px; /* Ajusta el ancho del iframe según sea necesario */
+        height: 100px; /* Ajusta la altura del iframe según sea necesario */
+        border-radius: 10px; /* Agrega bordes redondeados */
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
+        overflow: hidden; /* Oculta cualquier contenido que sobresalga del iframe */
+        margin-bottom: 10px; /* Agrega espacio entre los iframes */
+        
+        transition: border-color 0.3s ; /* Agrega una transición suave al cambio de color del borde */
+    }
+    
+    .item.left .iframe:last-child {
+        margin-bottom: 0; /* Elimina el margen inferior del último iframe para evitar espacio adicional */
+    }
+    
+    .item.left .iframe:hover {
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+        background-color: #780000; 
+        
+    }
+    
+    .item.left .iframe iframe {
+        width: 100%; /* Ajusta el ancho del iframe al 100% del contenedor */
+        height: 100%; /* Ajusta la altura del iframe al 100% del contenedor */
+        border: 2px solid transparent; /* Establece un borde transparente para que haya un borde alrededor del iframe */
+        transition: border-color 0.3s ease; /* Agrega una transición suave al cambio de color del borde */
+    }
+    
+   
+/*aca esta todo el css del  footer*/
+.footer{
+    grid-area:footer;
+    .footer-content {
+        text-align: center;
+        
+    }
+}
+
+
+/*aca esta el css de todos los items (hijos) de mi grid (heaser,left,contenido,footer)*/
+.item{
+    background-color:transparent;
+    padding: 10px;
+    color: #003049;
+    border-radius:0 10px;
+}
+
+
+
+/* Estilos para dispositivos pequeños (hasta 767px) */
+@media screen and (max-width: 767px) {
+    /* Ajustes para el encabezado */
+    .titulo {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .boton-iniciar-sesion,
+    .boton-cerrar-sesion {
+        padding: 0.5rem 1rem; /* Corrección del valor de padding */
+        font-size: 1rem;
+    }
+
+    /* Ajustes para el grid */
+    .container {
+        grid-template:
+            "header header"
+            "left left"
+            "contenido contenido"
+            "footer footer";
+    }
+
+   
+    .contenido img {
+        width: 80px;
+        height: 80px;
+        margin-top: 10px; /* Corrección del valor de margin-top */
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* Estilos para dispositivos medianos (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Ajustes para el encabezado */
+    .titulo {
+        font-size: 2rem;
+    }
+  
+    /* Ajustes para la columna izquierda */
+    .left .widget {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para dispositivos grandes (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+        .titulo {
+        font-size: 3rem;
+    }
+  
+   .contenido img {
+        width: 120px;
+        height: 120px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

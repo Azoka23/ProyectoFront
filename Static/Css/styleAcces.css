@@ -27,6 +27,7 @@ body {
 /*Aca esta todo el css del header*/
 .header{
     grid-area:header;
+
     .titulo {
         text-align: center;
         font-size:2rem;
@@ -152,9 +153,9 @@ border-radius:50%;
 .contenido{
     grid-area:contenido;
         overflow-x:auto; 
-        
-        overflow-y: hidden; 
-        white-space: nowrap; 
+        display:flex;
+        overflow-y: hidden;; 
+        flex-wrap: nowrap; 
         
     
 }
@@ -164,22 +165,57 @@ border-radius:50%;
 }
 
 /* Reducir el espacio entre el título y las imágenes en ambas secciones */
-.section_musicales h3{
+/* .section_musicales h3{
     margin-bottom: 5px;
     margin-top: 80px;
-}
+} */
 /* Reducir el espacio entre el título y las imágenes en ambas secciones */
- .section_teatro h3 {
+ /* .section_teatro h3 {
     margin-bottom: 5px;
     margin-top: 5px;
+} */
+
+.section_musicales,
+.section_teatro {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
 }
 
+.section_musicales img,
+.section_teatro img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+} 
+
+ .section_musicales img:hover,
+.section_teatro img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+} 
+
+
+
+
+.section_musicales img:last-child,
+.section_teatro img:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento para evitar espacio adicional */
+}
 /* Ajusta el tamaño y el espaciado de las imágenes */
 .contenido img {
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    margin-right: 5px;
+    /* display: inline-block; */
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
     margin-top: 5px;
 }
 
@@ -229,7 +265,7 @@ border-radius:50%;
 
 /* Estilos para el pulgar de la barra de desplazamiento */
 .contenido::-webkit-scrollbar-thumb {
-    background-color: #457B9D; /* Color del pulgar */
+    background-color:transparent; /* Color del pulgar */
     border-radius: 10px; /* Radio de borde del pulgar */
 }
 
@@ -241,12 +277,19 @@ border-radius:50%;
     /* Ajusta el ancho de las imágenes según tu preferencia */
     height: 100px;
     /* Ajusta el alto de las imágenes según tu preferencia */
-    border-radius: 50px;
+    /* border-radius: 50px; */
     /* Convierte las imágenes en círculos */
     margin-right: 10px;
     /* Espacio entre las imágenes */
-    margin-top: 80px;
+    margin-top: 20px;
     
+}
+
+.section_musicales h3,
+.section_teatro h3 {
+    /* text-align: center;
+    margin-top: 20px; */
+    margin-bottom: 10px;
 }
 
 .contenido h4{
@@ -375,7 +418,7 @@ border-radius:50%;
     grid-area:footer;
     .footer-content {
         text-align: center;
-        
+        /* margin-top: 250px; */
     }
 }
 

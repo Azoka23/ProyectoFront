@@ -152,12 +152,22 @@ body {
 
 /* Estilos para cada evento */
 .evento {
-    width: 30%; /* Ajusta el ancho según tus necesidades */
+     width: 30%;  
+    height:25%;
     margin-bottom: 20px;
     background-color: #FDF0D5;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #780000;
+
+    
+}
+
+
+
+.evento + .evento {
+    margin-top: 2px; /* Ajusta el margen superior entre eventos */
 }
 
 .evento h3 {
@@ -205,11 +215,12 @@ body {
     /* Espacio entre las imágenes */
     margin-top: 80px;
     
+    
 }
 
-.contenido h4{
+.contenido h2{
     /* Añade posicionamiento absoluto */
-     color:#457B9D;
+     color:#780000;
     position:sticky; /* Cambia a posicionamiento absoluto */
     bottom: 80px; /* Ajusta este valor según la altura del texto */
     left: 0;
@@ -218,7 +229,7 @@ body {
 }
 
 /* animacion de h4 */
-.contenido h4 {
+.contenido h2 {
     overflow: hidden; /* Oculta el desbordamiento del texto */
     white-space: nowrap; /* Evita que el texto se envuelva a la siguiente línea */
     animation: scrollText 10s linear infinite; /* Aplica la animación al texto */

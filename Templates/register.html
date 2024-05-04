@@ -39,33 +39,37 @@ para contraseñas o info importante se usa el POST-->
                 <div>
                     <label for="">Apellido</label>
                     <input type="text" name="lasttname" id="apellido">
-
+                    <div id="error-apellido" class="error-message" style="color: red;"></div>
                 </div>
                 <!-- <br> -->
                 <div>
                     <label for="">Nombre</label>
                     <input type="text" name="firstname" id="nombre">
+                    <div id="error-nombre" class="error-message" style="color: red;"></div>
                 </div>
                 <!-- <br> -->
                 <div>
                     <label for="">Fecha de nacimiento</label>
                     <input type="date" name="birthdayDate" id="fecha de nacimiento">
+                    <div id="error-fecha de nacimiento" class="error-message" style="color: red;"></div>
                 </div>
                 <!-- <br> -->
                 <div>
                     <label for="">Documento </label>
                     <input type="number" name="id" id="documento">
-
+                    <div id="error-documento" class="error-message" style="color: red;"></div>
                 </div>
                 <!-- <br> -->
                 <div>
                     <label for="">Telefono</label>
                     <input type="number" name="phone" id="telefono" >
+                    <div id="error-telefono" class="error-message" style="color: red;"></div>
                 </div>
                 <!-- <br> -->
                 <div>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" >
+                    <div id="error-email" class="error-message" style="color: red;"></div>
                 </div>
                 <!-- <br> -->
 
@@ -84,19 +88,23 @@ para contraseñas o info importante se usa el POST-->
                         <option value="Br">Brasil</option>
                     </select>
 
-                    
+                    <div id="error-pais de origen" class="error-message" style="color: red;"></div> 
                 </div>
                 <!-- <br> -->
                 <div>
 
                     <label for="">Contraseña</label>
                     <input type="password" name="contraseña" id="contraseña">
+                    <div id="error-contraseña" class="error-message" style="color: red;"></div>
                 </div>
 
-                <div>
-                    <input type="checkbox" id="terms-checkbox" name="terms-checkbox"required >
-                    <label for="terms-checkbox">Acepto los términos y condiciones</label>
-                <!-- boton de envio -->
+                 <div> 
+                     <input type="checkbox" id="terms-checkbox" name="terms-checkbox"required >
+                     <label for="terms-checkbox">Acepto los términos y condiciones</label>
+                     <div id="error-message" class="error-message" style="color: red;"></div>
+                    
+                </div>
+                    <!-- boton de envio -->
                 <div class="boton-registro">               
                 <input type="submit" value="Registrarse" class="sumbit-buttom">
             </div>

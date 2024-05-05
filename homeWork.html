@@ -56,9 +56,10 @@
             <form id="ticket-form">
                 <label for="event">Evento:</label>
                 <select id="event" name="event">
-                    <option value="evento1">Divididos</option>
+                    <option value="evento1">Musicales</option>
                     <option value="evento2">Teatro</option>
-                    <option value="evento3">Estelares</option>
+                    <option value="evento3">Todos</option>
+                    <!-- <option value="evento3">Estelares</option> -->
                     <!-- Agrega más opciones según los eventos disponibles -->
                 </select>
                 <label for="quantity">Cantidad de tickets:</label>
@@ -87,45 +88,52 @@
         
         <div class="item contenido">
             <h2>Eventos Disponibles - Selecciona tu favorito!! </h2>
+            <div class="evento-musical" data-type="musical"> 
             <div class="evento">
-                <h3>recital</h3>
+                <h3>Musical</h3>
                 <p>Divididos</p>
                 <br>
                 <img src="/Static/Imagenes/Imagenes/recitales/divididos.png" alt="Evento 1">
                
                 <p>Precio: $5000</p>
             </div>
+            
             <div class="evento">
-                <h3>teatro</h3>
-                <p>algo de teatro</p>
-                <img src="/Static/Imagenes/Teatro/6619bae30cdb7.webp" alt="Evento 2">
-                <p>Precio: $6500</p>
-            </div>
-            <div class="evento">
-                <h3>recital</h3>
+                <h3>Musical</h3>
                 <p>Estelares</p>
                 <img src="/Static/Imagenes/recitales/estelares_s.png" alt="Evento 3">
                 <p>Precio: $3500</p>
             </div>
             <div class="evento">
-                <h3>recital</h3>
+                <h3>Musical</h3>
                 <p>Kevin Johansen</p>
                 <img src="./Static/Imagenes/recitales/kevjohansen960.png" alt=""> 
                 
                 <p>Precio: $4500</p>
             </div>
             <div class="evento">
-                <h3>recital</h3>
+                <h3>Musical</h3>
                 <p>Dalila</p>
                 <img src="./Static/Imagenes/recitales/dalila_s.png"" alt=""> 
                 <p>Precio: $4000</p>
             </div>
             <div class="evento">
-                <h3>recital</h3>
+                <h3>Musical</h3>
                 <p>Ciro</p>
                 <img src="./Static/Imagenes/recitales/cirostafenew960.png"" alt="">
                 <p>Precio: $6000</p>
             </div>
+        </div>
+
+        <div class="evento-teatro" data-type="teatro">
+
+            <div class="evento">
+                <h3>Teatro</h3>
+                <p>algo de teatro</p>
+                <img src="/Static/Imagenes/Teatro/6619bae30cdb7.webp" alt="Evento 2">
+                <p>Precio: $6500</p>
+            </div>
+        </div>
             <!-- Agrega más divs .evento según los eventos disponibles -->
         </div>
 
@@ -155,6 +163,8 @@
 <!-- contadorTickets -->
 
 <script src="/Static/js/contadorTickets.js"></script>
+
+<script src="/Static/js/escucharOpcion.js"></script>
 </body>
 
 </html>

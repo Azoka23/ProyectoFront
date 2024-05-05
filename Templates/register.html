@@ -21,14 +21,21 @@
             <h1> Registro de usuario </h1>
 
         </nav>
+
+        <div class="boton-inicio">
+            <a href="/Index.htl.html" >
+                <input type="submit" value=" Volver Inicio " class="boton-home">
+            </a>
+      </div> 
     </header>
     <main >
         <section id="register-form">
             <!-- a donde envio el formulario -->
-            <form action="/Templates/guardaForm.html" method="get" id="register-form" novalidate>
+            <form action="/Templates/formularioRegistro/" method="get" id="register-form" novalidate>
                 <!-- get hace que los datos se agreguen 
 y sean visibles,sirve para busquedas , 
 para contraseñas o info importante se usa el POST-->
+
 
 
 
@@ -88,7 +95,7 @@ para contraseñas o info importante se usa el POST-->
                         <option value="Br">Brasil</option>
                     </select>
 
-                    <div id="error-pais de origen" class="error-message" style="color: red;"></div> 
+                    <div id="error-pais de origen" class="error-message" style="color: red;"></div>
                 </div>
                 <!-- <br> -->
                 <div>
@@ -98,16 +105,17 @@ para contraseñas o info importante se usa el POST-->
                     <div id="error-contraseña" class="error-message" style="color: red;"></div>
                 </div>
 
-                 <div> 
-                     <input type="checkbox" id="terms-checkbox" name="terms-checkbox"required >
-                     <label for="terms-checkbox">Acepto los términos y condiciones</label>
-                     <div id="error-message" class="error-message" style="color: red;"></div>
-                    
+                <div>
+                    <br>
+                    <input type="checkbox" id="terms-checkbox" name="terms-checkbox"required >
+                    <label for="terms-checkbox">Acepto los términos y condiciones</label>
+                    <div id="error-message" style="color: red;"></div>
                 </div>
-                    <!-- boton de envio -->
-                <div class="boton-registro">               
+                <!-- boton de envio -->
+
                 <input type="submit" value="Registrarse" class="sumbit-buttom">
-            </div>
+                <!-- <img src="/Static/imagenes/actions_document_print_15785.png" alt="Impresion documento"> -->
+
             </form>
         </section>
     </main>

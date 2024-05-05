@@ -1,4 +1,11 @@
 
+*{
+    box-sizing: border-box ;
+    margin: 0;
+    padding: 0    ;
+}
+
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -13,7 +20,7 @@ body {
                         "footer footer "  ;
    grid-gap:20px;
    height:100vh;
-   padding: 20px;
+   /* padding: 20px; */
    
     background-size: cover;
     background-attachment: fixed; /* Cambiar el modo de fijación del fondo */
@@ -27,56 +34,58 @@ body {
 /*Aca esta todo el css del header*/
 .header{
     grid-area:header;
-
     .titulo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
         text-align: center;
         font-size:2rem;
         color: #780000;
     }
 
+    
 .icono-usuario {
-    width: 30px; /* Ancho del contenedor del icono */
-    height: 30px; /* Altura del contenedor del icono */
-    margin-right: 10px; /* Espacio a la derecha del icono */
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px; 
 }
 
 .icono-usuario img {
-    width: 100%; /* Ancho del icono */
-    height: auto; /* Altura automática */
-
-margin-top: -20px;}
+    width: 100%; 
+    height: auto; 
+    margin-top: -20px;}
 
 
 .nombre-usuario {
-    font-size:1.6rem; /* Tamaño de fuente del nombre de usuario */
-    font-weight: bold; /* Estilo de fuente en negrita */
-margin-top: -5px;
-color:#003049;
+    font-size:1.6rem; 
+    font-weight: bold;
+    color:#003049;
 }
 
 .usuario-container {
-    display: flex; /* Alinear elementos horizontalmente */
-    
-    align-items: center; /* Centrar verticalmente */
+    display: flex; 
+    align-items: center; 
 }
 
 .item.header nav {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-
+  
 }
 
-#fecha {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
+ #fecha {
+    
+     position:absolute;
+     top: 5px;
+    right: 20px; 
+} 
 
 
 
 .titulo img {
-    width: 30px; 
+    width: 80px; 
     height: auto; 
     margin-right: 10px; 
 border-radius:50%;
@@ -85,6 +94,7 @@ border-radius:50%;
 .boton-container {
     display: flex;
     justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    margin-top: 10px;
 }
 
 .boton-iniciar-sesion {
@@ -107,25 +117,6 @@ border-radius:50%;
 }
 
 
-/* .boton-cerrar-sesion {
-    
-    padding: 8px 16px;
-    background-color: #669BBC;
-    color: #FDF0D5;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: transform 0.3s;  */
-
-    
-    /* display: inline-block;
-}
-
-.boton-cerrar-sesion:hover { 
-    transform: scale(1.1);   
-    background-color: #003049; 
-}  */
 
 /* Estilos para el botón de preguntas frecuentes */
 .boton-faq {
@@ -152,108 +143,52 @@ border-radius:50%;
 /*aca esta el css de toda la seccion de contenido*/
 .contenido{
     grid-area:contenido;
-        overflow-x:auto; 
-        display:flex;
-        overflow-y: hidden;; 
-        flex-wrap: nowrap; 
+        /* overflow-x:auto; 
+        overflow-y: hidden; 
+        white-space: nowrap;  */
         
     
 }
        /* Ajusta el espacio entre el título y las imágenes en ambas secciones */
 .section_musicales, .section_teatro {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 /* Reducir el espacio entre el título y las imágenes en ambas secciones */
-/* .section_musicales h3{
+.section_musicales h3{
     margin-bottom: 5px;
-    margin-top: 80px;
-} */
+    margin-top: 10px;
+}
 /* Reducir el espacio entre el título y las imágenes en ambas secciones */
- /* .section_teatro h3 {
+ .section_teatro h3 {
     margin-bottom: 5px;
     margin-top: 5px;
-} */
-
-.section_musicales,
-.section_teatro {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    
 }
 
-.section_musicales img,
-.section_teatro img {
-    width: 200px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-} 
-
- .section_musicales img:hover,
-.section_teatro img:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-} 
-
-
-
-
-.section_musicales img:last-child,
-.section_teatro img:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último elemento para evitar espacio adicional */
-}
 /* Ajusta el tamaño y el espaciado de las imágenes */
 .contenido img {
-    /* display: inline-block; */
-    width: 200px;
-    height: auto;
-    margin-right: 20px;
-    margin-top: 5px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    /* margin-right: 5px;
+    margin-top: 5px; */
 }
 
   /* Ajustes para el área de contenido */
 .contenido {
     grid-area: contenido;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: flex-start; */
 }
 
+.item contenido{
+    display: flex;
+    flex-direction: row;
 
-/* .evento {
-    width: 30%; 
-    margin-bottom: 20px;
-    background-color: #FDF0D5;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-} */
-
-/* .evento h3 {
-    margin-top: 0;
-    color: #003049;
 }
 
-.evento p {
-    margin-bottom: 10px;
-}
-
-.evento img {
-    width: 100%; 
-    height: auto;
-    border-radius: 5px;
-    max-width: 1fr!important;
-    max-height: 1fr!important;
-} */
 
 
 
@@ -265,7 +200,7 @@ border-radius:50%;
 
 /* Estilos para el pulgar de la barra de desplazamiento */
 .contenido::-webkit-scrollbar-thumb {
-    background-color:transparent; /* Color del pulgar */
+    background-color: #457B9D; /* Color del pulgar */
     border-radius: 10px; /* Radio de borde del pulgar */
 }
 
@@ -277,19 +212,12 @@ border-radius:50%;
     /* Ajusta el ancho de las imágenes según tu preferencia */
     height: 100px;
     /* Ajusta el alto de las imágenes según tu preferencia */
-    /* border-radius: 50px; */
+     border-radius: 10px; 
     /* Convierte las imágenes en círculos */
     margin-right: 10px;
     /* Espacio entre las imágenes */
-    margin-top: 20px;
+    margin-top: 10px;
     
-}
-
-.section_musicales h3,
-.section_teatro h3 {
-    /* text-align: center;
-    margin-top: 20px; */
-    margin-bottom: 10px;
 }
 
 .contenido h4{
@@ -329,6 +257,9 @@ border-radius:50%;
     .item.left {
         grid-area: left;
         margin-top: 40px; /* Agrega un margen superior de 20px */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .item.left .iframe {
@@ -360,65 +291,12 @@ border-radius:50%;
     }
     
    
-
-
-/*aca esta todo el css de la seccion izquierda*/
-/* .left {
-    grid-area: left;
-    
-    h2{
-        color:#003049;
-    }
-
-}
-
-#contador-tickets {
-    background-color: #FDF0D5;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid #780000; 
-} */
-
-/* #contador-tickets h3 {
-    margin-top: 0;
-    color: #003049;
-} */
-
-/* #contador-tickets p {
-    margin-bottom: 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: #457B9D;
-} */
-
-
-/* #comprar-btn img {
-    width: 30px; 
-    height: auto; 
-    transition: transform 0.3s; 
-}
-
-#comprar-btn img:hover {
-    transform: scale(1.2); 
-}
-
-#comprar-btn {
-    background-color: transparent; 
-    border:1px #780000; 
-} */
-
-/* #comprar-btn img {
-    width: 30px; 
-    height: auto; 
-} */
-
 /*aca esta todo el css del  footer*/
 .footer{
     grid-area:footer;
     .footer-content {
         text-align: center;
-        /* margin-top: 250px; */
+        
     }
 }
 
@@ -459,7 +337,7 @@ border-radius:50%;
     .contenido img {
         width: 80px;
         height: 80px;
-        margin-top: 60px; /* Corrección del valor de margin-top */
+        margin-top: 10px; /* Corrección del valor de margin-top */
         flex-wrap: wrap;
     }
 }
@@ -481,16 +359,14 @@ border-radius:50%;
 
 /* Estilos para dispositivos grandes (1024px en adelante) */
 @media screen and (min-width: 1024px) {
-    /* Ajustes para el encabezado */
-    .titulo {
+        .titulo {
         font-size: 3rem;
     }
   
-    /* Ajustes para el contenido */
-    .contenido img {
+   .contenido img {
         width: 120px;
         height: 120px;
-        margin-top: 80px;
+        margin-top: 10px;
     }
 }
 

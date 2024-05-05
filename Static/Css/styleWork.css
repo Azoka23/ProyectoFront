@@ -148,12 +148,13 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+    
 }
 
 /* Estilos para cada evento */
 .evento {
-     width: 30%;  
-    height:25%;
+     /* width: 30%;   */
+    height:200px;
     margin-bottom: 20px;
     background-color: #FDF0D5;
     padding: 10px;
@@ -165,24 +166,33 @@ body {
 }
 
 
-
-.evento + .evento {
-    margin-top: 2px; /* Ajusta el margen superior entre eventos */
+.evento-musical,
+.evento-teatro {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
 }
+/* .evento + .evento {
+    margin-top: 2px; 
+} */
 
 .evento h3 {
     margin-top: 0;
+    margin-bottom:5px;
     color: #003049;
 }
 
-.evento p {
-    margin-bottom: 10px;
-}
+ .evento p {
+    margin-top: 0px;
+} 
 
 .evento img {
     width: 100%; /* Ajusta el ancho de la imagen */
     height: auto;
     border-radius:5px; 
+    margin-right: 10px;
+     margin-bottom:0px; 
+     margin-top: 0;
     /* max-width: 70px!important;
     max-height: 70px!important; */
 }

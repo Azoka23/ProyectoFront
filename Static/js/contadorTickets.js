@@ -1,5 +1,5 @@
 // Suponiendo que tengas una variable ticketsVendidos que almacena el número actual de tickets vendidos
-let ticketsVendidos = 100; // Ejemplo de valor inicial
+let ticketsVendidos = 0; // Ejemplo de valor inicial
 
 // Función para actualizar el contador de tickets vendidos
 function actualizarContadorTickets() {

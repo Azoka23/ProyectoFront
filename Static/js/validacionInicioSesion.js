@@ -3,7 +3,7 @@ function validarInicioSesion(event) {
     // Evitar que el formulario se envíe automáticamente
     event.preventDefault();
 
-    console.log('Iniciando validación de inicio de sesión...');
+    // console.log('Iniciando validación de inicio de sesión...');
 
     // Obtener los valores de usuario y contraseña del formulario
     var usernameInput = document.getElementById('username');
@@ -21,10 +21,10 @@ function validarInicioSesion(event) {
     if (username === 'Fran' && password === '1234') {
         // Usuario y contraseña válidos
         alert('Inicio de sesión exitoso');
-        
+
         // Almacenar información del usuario en el almacenamiento local
         localStorage.setItem('usuarioValidado','Bienvenido ' + username);
-        
+
         // Mostrar el nombre de usuario y el icono
         var nombreUsuarioElement = document.getElementById('nombre-usuario');
         if (nombreUsuarioElement) {
@@ -36,11 +36,11 @@ function validarInicioSesion(event) {
             iconoUsuarioElement.classList.remove('hidden');
         }
 
-        // // Ocultar el botón de inicio de sesión
-        // var botonContainer = document.querySelector('.boton-container');
-        // if (botonContainer) {
-        //     botonContainer.style.display = 'none';
-        // }
+        // Ocultar el botón de inicio de sesión
+        var botonContainer = document.querySelector('.boton-container');
+        if (botonContainer) {
+            botonContainer.style.display = 'none';
+        }
 
         // Redireccionar a la página principal (homeGrid.html)
         window.location.href = '/homeWork.html';
@@ -48,8 +48,7 @@ function validarInicioSesion(event) {
         // Usuario o contraseña incorrectos
         alert('Usuario o contraseña incorrectos');
         // Limpiar los campos de usuario y contraseña
-        usernameInput.value = '';
-        passwordInput.value = '';
+        // ...
     }
 }
 
@@ -65,4 +64,4 @@ window.onload = function() {
     } else {
         console.error('No se encontró el formulario de inicio de sesión.');
     }
-};
+}

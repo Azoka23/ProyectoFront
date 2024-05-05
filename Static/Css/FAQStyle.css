@@ -51,14 +51,24 @@ border-radius:50%;
 }
 
 .boton-home {
- padding: 8px 16px;
+ /* padding: 8px 16px;
  background-color: #669BBC;
  color: #FDF0D5;
  border: none;
  border-radius: 5px;
- cursor: pointer;
- transition: transform 0.3s; 
- display: inline-block;
+ cursor: pointer; */
+ /* transition: transform 0.3s;  */
+ /* display: inline-block; */
+
+ 
+    display: -webkit-flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 10px;  
+    cursor:pointer;
+    
+
+
     
 }
 
@@ -68,6 +78,7 @@ border-radius:50%;
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
+
 }
 
 .respuesta-faq{
@@ -129,24 +140,27 @@ border-radius:50%;
     flex-direction: row;
 } */
 
-.boton-inicio{
+.boton-home{
     /* Estilos del botón */
     padding: 8px 16px;
     background-color: #669BBC;
-    color: #FDF0D5;
+    /* color: #FDF0D5; */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: transform 0.3s; /* Agrega una transición para suavizar el cambio */
+    /* transition: transform 0.3s;  */
 
     /* Estilos adicionales para la animación */
     display: inline-block;
+    text-decoration: none;
 }
 /* Regla para la animación al pasar el mouse */
-.boton-inicio:hover { 
-    transform: scale(1.1);   /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
-    background-color: #003049; /* Cambia el color de fondo al pasar el mouse */
+.boton-home:hover { 
+    /* transform: scale(1.1);   
+    background-color: #003049;  */
+    background-color: #457B9D;
+    border: 2px solid #003049;
 } 
 .footer{
     grid-area:footer;

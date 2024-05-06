@@ -20,7 +20,7 @@ function validarInicioSesion(event) {
     // Supongamos que el usuario y la contraseña válidos son 'usuario' y 'contraseña'
     if (username === 'Fran' && password === '1234') {
         // Usuario y contraseña válidos
-        alert('Inicio de sesión exitoso');
+        // alert('Inicio de sesión exitoso');
 
         // Almacenar información del usuario en el almacenamiento local
         localStorage.setItem('usuarioValidado','Bienvenido ' + username);

@@ -33,9 +33,14 @@ body {
     grid-area: header;
 
     .titulo {
-        text-align: center;
-        font-size: 2rem;
-        color: #780000;
+        
+
+        display: flex; 
+        flex-direction: column;   
+        align-items: center; 
+       font-size:2rem;
+       color: #780000;
+       margin-top:20px;
     }
 
     .icono-usuario {
@@ -84,24 +89,7 @@ body {
         flex-direction: column;
     }
 
-    /* .boton-iniciar-sesion {
-        
-        padding: 8px 16px;
-        background-color: #669BBC;
-        color: #FDF0D5;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: transform 0.3s;
-        display: inline-block;
-    } */
-
     
-    /* .boton-iniciar-sesion:hover {
-        transform: scale(1.1);
-        background-color: #003049;
-        
-    } */
 
 
     .boton-cerrar-sesion {
@@ -127,15 +115,20 @@ body {
         /* Cambia el color de fondo al pasar el mouse */
     }
     #fecha {
-        position: absolute;
-        top: 10px;
-        right: 20px;
+
+        font-size:1rem;
+        color: #003049;
+        margin-top: -40px; 
+       
     }
+
+
     .titulo img {
-        width: 30px; 
+         width: 80px; 
         height: auto; 
         margin-right: 10px; 
     border-radius:50%;
+    margin-bottom: -30px;
     }
 
 }
@@ -148,13 +141,14 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    
+    min-height: 550px;;
 }
 
 /* Estilos para cada evento */
 .evento {
-     /* width: 30%;   */
-    height:200px;
+      /* width:calc(30% - 40px); 
+      margin-right: 20px;   */
+    height:180px;
     margin-bottom: 20px;
     background-color: #FDF0D5;
     padding: 10px;
@@ -353,6 +347,7 @@ body {
             "left left"
             "contenido contenido"
             "footer footer";
+        grid-template-columns: 1fr; /* Cambia a una sola columna en dispositivos pequeños */
     }
    
     
@@ -371,60 +366,89 @@ body {
     }
 }
 
-
-
 /* Estilos para dispositivos medianos (768px a 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
-    /* Ajustes para el encabezado */
-    .titulo {
-        font-size: 2rem;
+    .left {
+        margin-top: 180px; 
     }
 
-    /* Ajustes para la columna izquierda */
-    .left .widget {
-        margin-bottom: 20px;
-    }
-
-    .contenido::-webkit-scrollbar {
-        width: 8px; /* Ajusta el ancho de la barra de desplazamiento */
-    }
-
-    /* Ajustes para el grid */
-    .container {
-        grid-template:
-            "header header"
-            "left left"
-            "contenido contenido"
-            "footer footer";
-    }
-}
-
-/* Estilos para dispositivos grandes (1024px en adelante) */
-@media screen and (min-width: 1024px) {
-
-    /* Ajustes para el encabezado */
-    .titulo {
-        font-size: 3rem;
+    
+    .contenido {
+        margin-top: 150px; 
+        overflow-x: auto;
     }
 
     /* Ajustes para el contenido */
     .contenido img {
         width: 100px;
         height: 100px;
-        margin-top: 80px;
+        margin-top: -20px;
     }
 
-    .contenido::-webkit-scrollbar {
-        width: 12px; /* Ajusta el ancho de la barra de desplazamiento */
+    /* Ajustes para los eventos en dispositivos grandes */
+    .evento {
+        width:120px; 
+        margin-right: 20px; 
+        margin-bottom: 20px;  
     }
 
-    /* Ajustes para el grid */
-    .container {
-        grid-template:
-            "header header"
-            "left left"
-            "contenido contenido"
-            "footer footer";
+    .evento img {
+        max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    }
+
+    .evento p {
+        margin-top: 0px;
+        max-width: 100px; /* Ajusta el ancho máximo del precio */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+
+/* Estilos para dispositivos grandes (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+
+    .left {
+        margin-top: 180px; 
+    }
+
+    
+    .contenido {
+        margin-top: 150px; 
+        overflow-x: auto;
+    }
+
+    /* Ajustes para el contenido */
+    .contenido img {
+        width: 100px;
+        height: 100px;
+        margin-top: -20px;
+    }
+
+    /* Ajustes para los eventos en dispositivos grandes */
+    .evento {
+        width: 120px; 
+         margin-right: 20px; 
+        margin-bottom: 20px;  
+    }
+
+    .evento img {
+        max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    }
+
+    .evento p {
+        margin-top: 0px;
+        max-width: 100px; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }

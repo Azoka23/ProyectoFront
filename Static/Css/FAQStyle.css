@@ -19,10 +19,7 @@
     /* display:grid; */
    }
 
-/* .title_faq img{
-    width: 150px;
-    height: 150px;
-} */
+
 
 .titulo img {
     width: 30px; /* Ancho deseado para el icono */
@@ -31,11 +28,6 @@
 border-radius:50%;
 }
 
-/* .title_faq h3{
-    color:#003049;
-    font-family:"Roboto", san serif;
-    font-size: 2rem;
-} */
 
 .titulo{
     color:#780000;
@@ -51,25 +43,12 @@ border-radius:50%;
 }
 
 .boton-home {
- /* padding: 8px 16px;
- background-color: #669BBC;
- color: #FDF0D5;
- border: none;
- border-radius: 5px;
- cursor: pointer; */
- /* transition: transform 0.3s;  */
- /* display: inline-block; */
-
- 
     display: -webkit-flex;
     justify-content:center;
     align-items: center;
     margin-top: 10px;  
     cursor:pointer;
-    
-
-
-    
+   
 }
 
 .container-faq{
@@ -125,20 +104,7 @@ border-radius:50%;
 }
 
 
-/* .footer-content {
-    margin-top: 20px;
-    padding: 20px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color:#134074; 
-    color:white;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    flex-direction: row;
-} */
+
 
 .boton-home{
     /* Estilos del botón */

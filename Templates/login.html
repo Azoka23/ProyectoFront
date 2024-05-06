@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
+    <!-- Enlace a la fuente Roboto desde Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- Enlace a la hoja de estilos para el inicio de sesión -->
     <link rel="stylesheet" type="text/css" href="/Static/Css/LogginStyle.css">
 </head>
+
 <body>
-    <header>
+    <!-- Encabezado con título -->
+    <header class="header">
         <h1>Iniciar Sesión</h1>
     </header>
     <main>
-        <!-- <form action="/login" method="post">
-            <div class="input-group"> -->
-                <form id="login-form" action="/homeWork.html" method="post">
-                    <div class="input-group">
+        <!-- Formulario de inicio de sesión -->
+        <form id="login-form" action="/homeWork.html" method="post">
+            <div class="input-group">
                 <label for="username">Usuario:</label>
                 <input type="text" id="username" name="username" placeholder="Ingresa tu nombre de usuario" required>
             </div>
@@ -27,9 +31,12 @@
                 <button type="submit">Ingresar</button>
             </div>
         </form>
-        <p> Olvidaste tu contraseña? <a href="/Templates/register.html">Recuperala  aquí</a>.</p>
+        <!-- Enlaces adicionales -->
+        <p> Olvidaste tu contraseña? <a href="/Templates/register.html">Recupérala aquí</a>.</p>
         <p>¿No tienes una cuenta? <a href="/Templates/register.html">Regístrate aquí</a>.</p>
     </main>
+    <!-- Script para validar el inicio de sesión -->
     <script src="/Static/js/validacionInicioSesion.js"></script>
 </body>
+
 </html>

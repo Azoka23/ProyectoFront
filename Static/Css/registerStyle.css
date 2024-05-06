@@ -1,32 +1,36 @@
+/* Estilos adicionales para el cuerpo */
 body {
-
+    /* Fuente para todo el cuerpo del documento */
     font-family: 'Roboto', sans-serif;
-    
-     /* background-color: #FDF0D5;  */
-     background-image: url("/Static/imagenes/cultural.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    width: 100%;
-    
-     background-color: rgba(253, 240, 213, 0.8);  
-    background-blend-mode: lighten; 
+
+    /* Imagen de fondo */
+    background-image: url("/Static/imagenes/cultural.jpg");
+    background-repeat: no-repeat; /* No se repite la imagen */
+    background-size: cover; /* La imagen se ajusta para cubrir el fondo */
+    width: 100%; /* Ancho completo */
+
+    /* Color de fondo con transparencia */
+    background-color: rgba(253, 240, 213, 0.8);  
+    background-blend-mode: lighten; /* Modo de mezcla de fondo */
 }
 
+/* Estilos para los títulos */
 h1 {
-    color: #780000;
-    margin-left: 200px;
+    color: #780000; /* Color del texto */
+    margin-left: 200px; /* Margen izquierdo */
 }
 
 /* Estilos generales para etiquetas y campos de entrada */
 label {
-    display: inline-block;
-    width: 150px;
-    text-align: right;
-    margin-right: 10px;
-    margin-left: 30px;
-    color: #003049;
+    display: inline-block; /* Hace que las etiquetas se muestren en línea */
+    width: 150px; /* Ancho de la etiqueta */
+    text-align: right; /* Alineación del texto a la derecha */
+    margin-right: 10px; /* Margen derecho */
+    margin-left: 30px; /* Margen izquierdo */
+    color: #003049; /* Color del texto */
 }
 
+/* Estilos para los campos de entrada y botones */
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -34,87 +38,54 @@ input[type="date"],
 input[type="password"],
 input[type="submit"],
 select {
-    width: 100%;
-    max-width: 300px;
-    padding: 8px;
-    border: 2px solid #003049;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    /* Añadido para un mejor espaciado */
+    width: 100%; /* Ancho completo */
+    max-width: 300px; /* Ancho máximo */
+    padding: 8px; /* Espacio dentro del elemento */
+    border: 2px solid #003049; /* Borde sólido */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Modelo de caja */
+    margin-top: 8px; /* Margen superior */
+    margin-bottom: 8px; /* Margen inferior */
+    /* Centra los campos de entrada */
     margin-left: auto;
-    /* Centrar los campos de entrada */
     margin-right: auto;
-    /* Centrar los campos de entrada */
 }
 
-
-input[type="submit"]:hover {
-    background-color: #457B9D;
-    border: 2px solid #003049;
-    /* Añadimos el borde solo cuando se pasa el mouse sobre el botón */
-
-}
-
+/* Estilos para el botón de envío */
 input[type="submit"] {
-    width: 200px;
-    padding: 8px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 8px;
-    float: center;
-    margin-left:500px;
-    color: #003049;
+    width: 200px; /* Ancho del botón */
+    padding: 8px; /* Espacio dentro del botón */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Modelo de caja */
+    margin-top: 8px; /* Margen superior */
+    float: center; /* Centra el botón */
+    margin-left: 500px; /* Margen izquierdo */
+    color: #003049; /* Color del texto */
 }
 
-/* Estilos para el botón y la imagen */
+/* Estilos para el contenedor del botón */
 .button-container {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin-top: 10px; /* Ajusta el margen según sea necesario */
-
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 10px; /* Margen superior */
 }
 
+/* Estilos adicionales para el botón de inicio */
 .submit-button {
-    
-    flex: 1;
+    flex: 1; /* Ocupa todo el espacio disponible */
 }
-.boton-inicio{
-    
-    padding: 8px 16px;
-    color: #FDF0D5;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-     transition: transform 0.3s;  
-     display: inline-block;  
-
-     
-     
-}
-/* Regla para la animación al pasar el mouse */
-/.boton-inicio:hover {  
-    /* transform: scale(1.1);    */
-    /* background-color: #003049;  */
-    background-color: #457B9D;
-    border: 2px solid #003049;
- }  
-
 
 /* Estilos para dispositivos pequeños (hasta 767px) */
 @media screen and (max-width: 767px) {
-
-    /* Ajustes para los elementos del formulario */
+    /* Ajustes para las etiquetas y campos de entrada */
     label {
-        display: block;
-        width: auto;
-        text-align: left;
-        margin-right: 0;
-        margin-bottom: 5px;
-        margin-left: 30px;
+        display: block; /* Muestra las etiquetas en bloque */
+        width: auto; /* Ancho automático */
+        text-align: left; /* Alineación del texto a la izquierda */
+        margin-right: 0; /* Sin margen derecho */
+        margin-bottom: 5px; /* Margen inferior */
+        margin-left: 30px; /* Margen izquierdo */
     }
 
     input[type="text"],
@@ -124,48 +95,22 @@ input[type="submit"] {
     input[type="password"],
     input[type="submit"],
     select {
-        width: calc(100% - 20px);
-        /* Resta 20px para tener un pequeño margen a los lados */
-        max-width: 300px;
-        /* Ajusta este valor según lo que consideres apropiado */
-        padding: 8px;
-        border: 2px solid #003049;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        /* Añadido para un mejor espaciado */
+        width: calc(100% - 20px); /* Ancho del 100% menos 20px */
+        max-width: 300px; /* Ancho máximo */
+        padding: 8px; /* Espacio dentro del elemento */
+        border: 2px solid #003049; /* Borde sólido */
+        border-radius: 4px; /* Borde redondeado */
+        box-sizing: border-box; /* Modelo de caja */
+        margin-top: 8px; /* Margen superior */
+        margin-bottom: 8px; /* Margen inferior */
+        /* Centra los campos de entrada */
         margin-left: auto;
-        /* Centrar los campos de entrada */
         margin-right: auto;
-        /* Centrar los campos de entrada */
     }
 
     input[type="submit"] {
-        margin-top: 20px;
-        width: calc(100% - 20px);
-        /* Resta 20px para tener un pequeño margen a los lados */
+        margin-top: 20px; /* Margen superior */
+        width: calc(100% - 20px); /* Ancho del 100% menos 20px */
     }
-}
-
-
-/* Estilos para dispositivos medianos (768px a 1023px) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-
-    /* Ajustes para el encabezado */
-    h1 {
-        font-size: 28px;
-    }
-    
-}
-
-/* Estilos para dispositivos grandes (1024px en adelante) */
-@media screen and (min-width: 1024px) {
-
-    /* Ajustes para el encabezado */
-    h1 {
-        font-size: 36px;
-    }
-
 }
 

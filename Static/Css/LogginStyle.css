@@ -1,104 +1,112 @@
 /* Estilos adicionales para los elementos del formulario */
 body {
+    /* Fuente para todo el cuerpo del documento */
     font-family: 'Roboto', sans-serif;
+
+    /* Imagen de fondo para el cuerpo */
+    background-image: url("/Static/Imagenes/cultural.jpg");
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    width: 100%;
+
+    /* Color de fondo con transparencia */
+    background-color: rgba(253, 240, 213, 0.8);  
+    background-blend-mode: lighten; /* Modo de mezcla de fondo para efectos visuales */
 }
 
+/* Contenedor para agrupar etiquetas y campos de entrada */
 .input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+    display: flex; /* Utiliza flexbox para el diseño */
+    flex-direction: column; /* Orientación de los elementos */
+    margin-bottom: 15px; /* Espacio entre los grupos de entrada */
 }
 
+/* Estilo para las etiquetas dentro de los grupos de entrada */
 .input-group label {
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el campo de entrada */
 }
 
-body{
-    background: #FDF0D5;
-}
-h1{
-    color:#780000;
+/* Estilo para los títulos */
+h1 {
+    color: #780000; /* Color del texto */
 }
 
+/* Estilos para los campos de entrada y botones */
 input[type="text"],
 input[type="password"],
 button[type="submit"] {
-    width: 250px;
-    padding: 10px;
-    border: 2px solid #003049;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 8px;
-    text-align: center;
-    font-size: 16px;
+    width: 250px; /* Ancho de los campos de entrada y botones */
+    padding: 10px; /* Espacio dentro del elemento */
+    border: 2px solid #003049; /* Borde sólido con color */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Modelo de caja para incluir el borde en el tamaño total */
+    margin-top: 8px; /* Espacio superior */
+    text-align: center; /* Alineación del texto */
+    font-size: 16px; /* Tamaño de fuente */
 }
 
+/* Estilos para el botón de envío */
 button[type="submit"] {
-    background-color:#669BBC;
-    color: #FDF0D5;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #669BBC; /* Color de fondo */
+    color: #FDF0D5; /* Color del texto */
+    cursor: pointer; /* Cursor interactivo */
+    transition: background-color 0.3s ease; /* Transición suave para cambios de color */
 }
 
+/* Cambio de color al pasar el mouse sobre el botón */
 button[type="submit"]:hover {
     background-color: #457B9D;
 }
 
-/* Otros estilos */
+/* Estilos adicionales para otros elementos */
 header {
-    text-align: center;
-    margin-bottom: 20px;
-    color:FDF0D5;
+    text-align: center; /* Alineación del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+    color: #FDF0D5; /* Color del texto */
 }
-
 
 p {
-    text-align: center;
+    text-align: center; /* Alineación del texto */
 }
-
 
 /* Estilos para dispositivos pequeños (hasta 767px) */
 @media screen and (max-width: 767px) {
-    /* Ajustes para el encabezado */
+    /* Ajustes para el tamaño del título */
     h1 {
-        font-size: 24px;
+        font-size: 24px; /* Tamaño de fuente más pequeño */
     }
 
-    /* Ajustes para los elementos del formulario */
+    /* Ajustes para las etiquetas y campos de entrada */
     .input-group label {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Espacio adicional entre la etiqueta y el campo de entrada */
     }
 
     input[type="text"],
     input[type="password"],
     button[type="submit"] {
-        width: 100%;
-        padding: 8px;
-        border: 2px solid #003049;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 10px;
-        text-align: left;
-        font-size: 14px;
+        width: 100%; /* Ancho completo en dispositivos pequeños */
+        padding: 8px; /* Espacio más pequeño dentro del elemento */
+        margin-top: 10px; /* Espacio superior */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
     }
 
     button[type="submit"] {
-        margin-top: 20px;
+        margin-top: 20px; /* Espacio adicional para el botón de envío */
     }
 }
 
 /* Estilos para dispositivos medianos (768px a 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* Ajustes para el encabezado */
+    /* Ajustes para el tamaño del título */
     h1 {
-        font-size: 28px;
+        font-size: 28px; /* Tamaño de fuente más grande */
     }
 }
 
 /* Estilos para dispositivos grandes (1024px en adelante) */
 @media screen and (min-width: 1024px) {
-    /* Ajustes para el encabezado */
+    /* Ajustes para el tamaño del título */
     h1 {
-        font-size: 36px;
+        font-size: 36px; /* Tamaño de fuente aún más grande */
     }
 }

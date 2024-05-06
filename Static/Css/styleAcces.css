@@ -1,9 +1,9 @@
 
-*{
+ *{
     box-sizing: border-box ;
     margin: 0;
     padding: 0    ;
-}
+} 
 
 
 body {
@@ -34,17 +34,22 @@ body {
 /*Aca esta todo el css del header*/
 .header{
     grid-area:header;
-    .titulo {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        text-align: center;
+     .titulo {
+         display: flex; 
+         flex-direction: column; 
+         align-items: center; 
+         /* justify-content: center;  */
+        /* text-align: center; */
         font-size:2rem;
         color: #780000;
-    }
+        margin-top:20px;
+    } 
 
-    
+    /* .titulo {
+        text-align: center;
+        font-size: 2rem;
+        color: #780000;
+    } */
 .icono-usuario {
     width: 30px; 
     height: 30px; 
@@ -77,9 +82,19 @@ body {
 
  #fecha {
     
-     position:absolute;
-     top: 5px;
-    right: 20px; 
+     /* position:relative;
+     top: 20px;
+    right: 20px;  */
+    /* position:sticky; */
+    /* display: flex;  
+         flex-direction: column; 
+         align-items: center;  */
+         /* justify-content: center;  */
+        /* text-align: center; */
+        font-size:1rem;
+        color: #003049;
+        /* margin-top:10px; */
+    
 } 
 
 
@@ -143,6 +158,7 @@ border-radius:50%;
 /*aca esta el css de toda la seccion de contenido*/
 .contenido{
     grid-area:contenido;
+    margin-top:130px;
         /* overflow-x:auto; 
         overflow-y: hidden; 
         white-space: nowrap;  */
@@ -256,7 +272,7 @@ border-radius:50%;
    
     .item.left {
         grid-area: left;
-        margin-top: 40px; /* Agrega un margen superior de 20px */
+        margin-top: 200px; /* Agrega un margen superior de 20px */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -339,6 +355,15 @@ border-radius:50%;
         height: 80px;
         margin-top: 10px; /* Corrección del valor de margin-top */
         flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .item.left {
+        grid-area: left;
+        margin-top: 10px; /* Agrega un margen superior de 20px */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -363,6 +388,7 @@ border-radius:50%;
         font-size: 3rem;
     }
   
+   
    .contenido img {
         width: 120px;
         height: 120px;

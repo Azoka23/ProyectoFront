@@ -51,6 +51,13 @@ select {
     margin-right: auto;
 }
 
+
+input[type="submit"]:hover {
+    background-color: #457B9D;
+    border: 2px solid #003049;
+    /* Añadimos el borde solo cuando se pasa el mouse sobre el botón */
+
+}
 /* Estilos para el botón de envío */
 input[type="submit"] {
     width: 200px; /* Ancho del botón */
@@ -69,12 +76,17 @@ input[type="submit"] {
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     margin-top: 10px; /* Margen superior */
+    transition: background-color 0.3s ease;
 }
 
 /* Estilos adicionales para el botón de inicio */
 .submit-button {
     flex: 1; /* Ocupa todo el espacio disponible */
 }
+
+
+
+
 
 /* Estilos para dispositivos pequeños (hasta 767px) */
 @media screen and (max-width: 767px) {

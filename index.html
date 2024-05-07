@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleteria Digital</title>
+    <!-- Icono de la página -->
+    <link rel="shortcut icon" href="/Static/imagenes/cinema_12223.ico">
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="/Static/Css/styleAcces.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <section class="container">
+        <!-- Encabezado -->
+        <div class="item header">
+            <nav>
+                <!-- Logo y título -->
+                <div class="titulo">
+                    <img src="/Static/Imagenes/Imagenes/BoleteriaDigital_logo.jpeg" alt="Icono">
+                    <h1>Boleteria Digital</h1>
+                    <!-- Contenedor para la fecha -->
+                    <div id="fecha"></div>
+                </div>
+                <!-- Botones de inicio de sesión y preguntas frecuentes -->
+                <div class="boton-container">
+                    <a href="/Templates/login.html">
+                        <input type="submit" value="Iniciar sesión" class="boton-iniciar-sesion">
+                    </a>
+                    <a href="/FAQ.html" class="boton-faq">Preguntas frecuentes</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Contenido izquierdo con adelantos -->
+        <div class="item left">
+            <h3>No te pierdas estos adelantos!!</h3>
+            <!-- Iframes con videos -->
+            <div class="iframe">
+                <iframe width="180px" height="180px" src="https://www.youtube.com/embed/KuiJukxComI" title="COSQUIN ROCK 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="iframe">
+                <iframe width="180" height="180px" src="https://www.youtube.com/embed/NogHrGbLvMw" title="Elena Roger in PIAF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- Contenido principal -->
+        <div class="item contenido">
+            <!-- Secciones de eventos -->
+            <div class="section_musicales">
+                <h4>Gran cantidad de eventos para seleccionar</h4>
+                <br>
+                <br>
+                <h3>MUSICALES</h3>
+                <!-- Imágenes de eventos musicales -->
+                <img src="./Static/Imagenes/recitales/661d97bba004e.webp" alt="">
+                <img src="./Static/Imagenes/recitales/661d9a578230d.webp" alt="">
+                <img src="./Static/Imagenes/recitales/661d5dac60b92.webp" alt="">
+                <img src="./Static/Imagenes/recitales/cirostafenew960.png" alt="">
+                <img src="./Static/Imagenes/recitales/dalila_s.png" alt="">
+                <img src="./Static/Imagenes/recitales/divididos.png" alt="">
+                <img src="./Static/Imagenes/recitales/estelares_s.png" alt="">
+                <img src="./Static/Imagenes/recitales/kevjohansen960.png" alt="">
+            </div>
+            <div class="section_teatro">
+                <h3>TEATRO</h3>
+                <!-- Imágenes de eventos teatrales -->
+                <img src="./Static/Imagenes/Teatro/660d5ebc6e0ad.webp" alt="">
+                <img src="./Static/Imagenes/Teatro/6615387b3f96a.webp" alt="">
+                <img src="./Static/Imagenes/Teatro/6619bae30cdb7.webp" alt="">
+                <img src="./Static/Imagenes/Teatro/1.jpeg" alt="">
+                <img src="./Static/Imagenes/Teatro/2.jpeg" alt="">
+                <img src="./Static/Imagenes/Teatro/3.jpeg" alt="">
+                <img src="./Static/Imagenes/Teatro/4.jpeg" alt="">
+                <img src="./Static/Imagenes/Teatro/5.jpeg" alt="">
+            </div>
+        </div>
+        <!-- Pie de página -->
+        <div class="item footer">
+            <div class="footer-content">
+                <p>Seguinos en :
+                    <!-- Iconos de redes sociales -->
+                    <img src="/Static/imagenes/facebook_logo_icon_147291.ico" alt="logo 1">
+                    <img src="/Static/imagenes/instagram_logo_icon_181738.ico" alt="logo 2">
+                    <img src="/Static/imagenes/whatsapp_logo_icon_147205.ico" alt="logo 3">
+                </p>
+                <p>Derechos Registrados</p>
+                <p>argentina @</p>
+            </div>
+        </div>
+    </section>
+    <!-- Script para mostrar la fecha actualizada -->
+    <script src="/Static/js/fechaActual.js"></script>
+</body>
+
+</html>

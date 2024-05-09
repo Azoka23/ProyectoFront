@@ -71,10 +71,18 @@ p {
 
 /* Estilos para dispositivos pequeños (hasta 767px) */
 @media screen and (max-width: 767px) {
+    body {
+        
+        /* Imagen de fondo para el cuerpo */
+        background-position: center;
+        min-height: 100vh;
+    }
+
     /* Ajustes para el tamaño del título */
     h1 {
         font-size: 24px; /* Tamaño de fuente más pequeño */
     }
+   
 
     /* Ajustes para las etiquetas y campos de entrada */
     .input-group label {
@@ -84,7 +92,7 @@ p {
     input[type="text"],
     input[type="password"],
     button[type="submit"] {
-        width: 100%; /* Ancho completo en dispositivos pequeños */
+        width: calc(100% - 20px) ;/* Ancho completo en dispositivos pequeños */
         padding: 8px; /* Espacio más pequeño dentro del elemento */
         margin-top: 10px; /* Espacio superior */
         font-size: 14px; /* Tamaño de fuente más pequeño */
@@ -102,11 +110,42 @@ p {
         font-size: 28px; /* Tamaño de fuente más grande */
     }
 }
+input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+        width: calc(100% - 20px) ;/* Ancho completo en dispositivos pequeños */
+        padding: 8px; /* Espacio más pequeño dentro del elemento */
+        margin-top: 10px; /* Espacio superior */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+
+    body {
+        
+        /* Imagen de fondo para el cuerpo */
+        background-position: center;
+        min-height: 100vh;
+    }
 
 /* Estilos para dispositivos grandes (1024px en adelante) */
 @media screen and (min-width: 1024px) {
     /* Ajustes para el tamaño del título */
     h1 {
         font-size: 36px; /* Tamaño de fuente aún más grande */
+    }
+
+    body {
+        
+        /* Imagen de fondo para el cuerpo */
+        background-position: center;
+        min-height: 100vh;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+        width: calc(50% - 20px) ;/* Ancho completo en dispositivos pequeños */
+        padding: 8px; /* Espacio más pequeño dentro del elemento */
+        margin-top: 10px; /* Espacio superior */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
     }
 }

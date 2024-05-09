@@ -124,5 +124,36 @@ input[type="submit"] {
         margin-top: 20px; /* Margen superior */
         width: calc(100% - 20px); /* Ancho del 100% menos 20px */
     }
+    body {
+        
+        /* Imagen de fondo para el cuerpo */
+        background-position: center;
+        min-height: 100vh;
+    }
 }
 
+
+/* Estilos para dispositivos medianos (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    body {
+        
+        /* Imagen de fondo para el cuerpo */
+        background-position: center;
+        min-height: 100vh;
+    }
+
+}
+
+
+
+/* Estilos para dispositivos grandes (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+
+    body {
+        
+        /* Imagen de fondo para el cuerpo */
+        background-position: center;
+        min-height: 100vh;
+    }
+}

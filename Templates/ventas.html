@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Compra</title>
+    <link rel="stylesheet" href="/Static/Css/ventasStyle.css">
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <img src="/Static/Imagenes/Imagenes/BoleteriaDigital_logo.jpeg" alt="Icono">
+            <h1>Boleteria Digital</h1>
+            <!-- Contenedor para la fecha -->
+            <div id="fecha"></div>
+        </div>
+        <h1>Realizar Compra</h1>
+    </header>
+    <main>
+        <form id="ticket-form">
+            <a href="/homeWork.html" class="custom-btn">
+                <img src="/Static/Imagenes/flecha-volver.png" alt="Flecha volver">
+                Volver
+            </a>
+            
+            <label for="nombre">Nombre y apellido:</label>
+            <input type="text" id="nombre" name="nombre">
+            
+            <label for="evento">Evento:</label>
+            <select id="evento" name="evento">
+                <option value="evento1">Evento 1</option>
+                <!-- Agrega más opciones según los eventos disponibles -->
+            </select>
+            
+            <label for="metodo-pago">Método de Pago:</label>
+            <select id="metodo-pago" name="metodo-pago" required>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+            </select>
+            
+            <label for="quantity">Cantidad de Tickets:</label>
+            <select id="quantity" name="quantity" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <button type="submit" id="comprar-btn">
+                <img src="/Static/Imagenes/diagram-61_24456.ico" alt="Carrito de compras">
+                Comprar
+            </button>
+        </form>
+
+        <!-- Detalle de la compra -->
+        <div id="detalle-compra" style="display: none;">
+            <h2>Detalle de la Compra</h2>
+            <p><strong>Nombre y Apellido:</strong> <span id="nombre-apellido"></span></p>
+            <p><strong>Evento:</strong> <span id="evento-seleccionado"></span></p>
+            <p><strong>Cantidad de Tickets:</strong> <span id="cantidad-tickets"></span></p>
+            <p><strong>Precio Total:</strong> <span id="precio-total"></span></p>
+            <p><strong>Forma de Pago:</strong> <span id="forma-pago"></span></p>
+            <p><strong>Fecha de Compra:</strong> <span id="fecha-compra"></span></p>
+
+            <img src="/Static/Imagenes/actions_document_print_15785.png" alt="Icono de Impresora" id="print-icon">
+        </div>
+
+        <div id="contador-tickets">
+            <h3>Tickets Vendidos Hoy:</h3>
+            <p id="numero-tickets">0</p>
+        </div>
+    </main>
+    <script>
+        // Recuperar la información sobre el evento seleccionado
+        var tituloEvento = localStorage.getItem('tituloEvento');
+        var precioEvento = localStorage.getItem('precioEvento');
+        console.log("Título del evento:", tituloEvento);
+        console.log("Precio del evento:", precioEvento);
+    </script>
+
+    <script src="/Static/js/mostrarDetalleCompra.js"></script>
+    <script src="/Static/js/contadorTickets.js"></script>
+    <script src="/Static/js/nombreUsuario.js"></script>
+    <script src="/Static/js/funcionImpresion.js"></script>
+    <script src="/Static/js/fechaActual.js"></script>
+</body>
+
+</html>

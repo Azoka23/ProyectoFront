@@ -262,7 +262,7 @@ body {
 
 }
 
-#contador-tickets {
+/* #contador-tickets {
     background-color: #FDF0D5;
     padding: 10px;
     border-radius: 5px;
@@ -280,7 +280,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #457B9D;
-}
+} */
 
 
 #comprar-btn img {
@@ -301,6 +301,58 @@ body {
 #comprar-btn img {
     width: 30px; /* Ajusta el ancho de la imagen según sea necesario */
     height: auto; /* Para mantener la proporción de la imagen */
+}
+
+.realizarCompra{
+    margin-top: 200px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.realizarCompra:hover {
+    transform: scale(1.1);
+    /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+    background-color: #E5E5E5;
+    /* Cambia el color de fondo al pasar el mouse */
+}
+/* Estilo para el select */
+/* #event {
+    padding: 8px;
+    border: 2px solid #003049;
+    border-radius: 5px;
+    background-color: #FDF0D5;
+} */
+
+/* Estilo para las opciones */
+/* #event option {
+    background-color: #FDF0D5;
+    color: #003049;
+} */
+
+/* Estilo para la opción seleccionada */
+/* #event option:checked {
+    background-color: #457B9D; 
+    color: #FDF0D5; 
+    border: 2px solid #003049; 
+    border-radius: 5px; 
+    
+} */
+
+/* Estilos para cada evento */
+.evento {
+    height: 180px;
+    margin-bottom: 20px;
+    background-color: #FDF0D5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el evento seleccionado */
+.evento.selected {
+    background-color: #457B9D; /* Cambia el color de fondo del evento seleccionado */
+    color: #FDF0D5; /* Cambia el color del texto del evento seleccionado */
 }
 
 /*aca esta todo el css del  footer*/

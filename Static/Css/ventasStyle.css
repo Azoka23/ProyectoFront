@@ -1,0 +1,191 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("/Static/Imagenes/tickets.jpeg");
+
+}
+
+header {
+    text-align: center;
+    background-color: #457B9D;
+    color: #FFF;
+    padding: 20px;     
+        
+}
+
+.titulo {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    /* justify-content: center;  */
+   /* text-align: center; */
+   font-size:2rem;
+   color: #780000;
+   margin-top:5px;
+} 
+
+.titulo img {
+    width: 80px; 
+    height: auto; 
+    margin-right: 10px; 
+border-radius:50%;
+margin-bottom:0;
+margin-bottom: -60px;
+}
+
+#fecha {
+    font-size:1rem;
+    color: #003049; 
+} 
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    background-color: #FDF0D5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #003049;
+}
+
+input[type="text"],
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #780000;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#nombre-usuario,#titulo-evento {
+    display: inline-block; 
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #780000; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+button {
+    background-color: #669BBC;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #003049;
+}
+
+#contador-tickets {
+    background-color: #FDF0D5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #780000; 
+}
+#volver-btn{
+    position:absolute;
+    top:200px;
+    right:30px;
+}
+
+#contador-tickets h3 {
+    margin-top: 10px;
+    color: #003049;
+    /* margin-bottom: 10px; */
+}
+
+#contador-tickets p {
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #457B9D;
+}
+
+.footer {
+    grid-area: footer;
+
+    .footer-content {
+        text-align: center;
+
+    }
+}
+
+
+
+/*aca esta el css de todos los items (hijos) de mi grid (heaser,left,contenido,footer)*/
+.item {
+    background-color: #134074;
+    color: #E5E5E5;
+    padding: 10px;
+    /* color: #003049; */
+    padding: 20px;
+    border-radius: 0 10px;
+    margin-top: 10px;
+}
+
+/* Estilos para el detalle de la compra */
+#detalle-compra {
+    background-color: #FDF0D5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom:20px ;
+    border: 2px solid #780000; 
+}
+
+#detalle-compra h2 {
+    color: #003049;
+    margin-bottom: 10px;
+}
+
+#detalle-compra ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#detalle-compra ul li {
+    margin-bottom: 10px;
+}
+
+#detalle-compra ul li strong {
+    color: #457B9D;
+}
+
+#detalle-compra img{
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 2px solid #457B9D; 
+    align-items:center;
+    /* margin-right: 40px; */
+    
+}
+
+/* Estilos para pantallas más pequeñas */
+@media only screen and (max-width: 600px) {
+    #volver-btn {
+        position: static; /* Vuelve a la posición estática en el flujo del documento */
+        margin-top: 5px; /* Ajusta el margen superior según sea necesario */
+        margin-left: auto; /* Centra horizontalmente */
+        margin-right: auto; /* Centra horizontalmente */
+        display: block; /* Cambia a bloque para que se muestre debajo del header */
+        width: 80%; /* Ajusta el ancho del botón */
+    }
+}

@@ -23,6 +23,14 @@ formularioCompra.addEventListener('submit', function(event) {
 
     // Actualiza el contador de tickets vendidos
     actualizarContadorTickets();
-     // Restablece el valor del campo de cantidad de tickets a cero
-     document.getElementById('quantity').value = '0';
+
+    // Aquí puedes agregar la lógica para guardar la venta en la base de datos
+    guardarVentaEnBaseDeDatos(cantidadTickets); // Debes implementar esta función
 });
+
+// Función para guardar la venta en la base de datos
+function guardarVentaEnBaseDeDatos(cantidadTickets) {
+    // Aquí debes realizar una petición HTTP (por ejemplo, con fetch) para enviar los datos de la venta a tu servidor
+    // En el servidor, debes procesar esta información y guardarla en la base de datos
+    // Puedes enviar la cantidad de tickets vendidos y otros detalles relevantes de la venta
+}

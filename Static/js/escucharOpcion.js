@@ -14,25 +14,47 @@ document.addEventListener('DOMContentLoaded', function () {
         var selectedValue = selectEvent.value;
 
         // Mostrar u ocultar los eventos musicales según la opción seleccionada
-        if (selectedValue === 'evento1' || selectedValue === 'evento3') {
-            eventosMusicales.forEach(function (evento) {
+        eventosMusicales.forEach(function (evento) {
+            evento.style.border = '2px solid #780000'; // Restaurar el borde original
+            if (selectedValue === 'evento1' || selectedValue === 'evento3') {
                 evento.style.display = 'block'; // Mostrar el evento musical
-            });
-        } else {
-            eventosMusicales.forEach(function (evento) {
+            } else {
                 evento.style.display = 'none'; // Ocultar el evento musical
-            });
-        }
+            }
+        });
 
         // Mostrar u ocultar los eventos de teatro según la opción seleccionada
-        if (selectedValue === 'evento2' || selectedValue === 'evento3') {
-            eventosTeatro.forEach(function (evento) {
+        eventosTeatro.forEach(function (evento) {
+            evento.style.border = '2px solid #780000'; // Restaurar el borde original
+            if (selectedValue === 'evento2' || selectedValue === 'evento3') {
                 evento.style.display = 'block'; // Mostrar el evento de teatro
-            });
-        } else {
-            eventosTeatro.forEach(function (evento) {
+            } else {
                 evento.style.display = 'none'; // Ocultar el evento de teatro
-            });
-        }
+            }
+        });
+    });
+
+    // Escuchar el clic en cualquier evento
+    document.querySelectorAll('.evento').forEach(function (evento) {
+        evento.addEventListener('click', function () {
+            // Resaltar el evento seleccionado
+            evento.style.border = '2px solid #457B9D';
+
+            // Obtener la información del evento seleccionado
+            var infoEvento = evento.querySelector('h3').textContent + ' - ' + evento.querySelector('p').textContent;
+
+            // Almacenar la información del evento en sessionStorage
+            sessionStorage.setItem('eventoSeleccionado', infoEvento);
+
+            // Deseleccionar el evento si ya estaba seleccionado
+            if (evento.classList.contains('selected')) {
+                evento.classList.remove('selected');
+                // Restaurar el borde original
+                evento.style.border = '2px solid #780000';
+            } else {
+                // Marcar el evento como seleccionado
+                evento.classList.add('selected');
+            }
+        });
     });
 });

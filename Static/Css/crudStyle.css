@@ -1,0 +1,209 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    /* Imagen de fondo */
+    background-image: url("/Static/imagenes/cultural.jpg");
+    background-repeat: no-repeat; /* No se repite la imagen */
+    background-size: cover; /* La imagen se ajusta para cubrir el fondo */
+    width: 100%; /* Ancho completo */
+    /* Color de fondo con transparencia */
+    background-color: rgba(253, 240, 213, 0.8);  
+    background-blend-mode: lighten; /* Modo de mezcla de fondo */
+}
+
+.titulo {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    font-size: 2rem;
+    color: #780000;
+    margin-top: 20px;
+}
+
+#fecha {
+    font-size: 1rem;
+    color: #003049; 
+}
+
+.titulo img {
+    width: 80px; 
+    height: auto; 
+    margin-right: 10px; 
+    border-radius: 50%;
+}
+
+h2, h3 {
+    color: #0056b3;
+}
+
+p {
+    color: #669BBC;
+}
+
+.header {
+    background-color: #fdf0d5;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.main {
+    padding: 20px;
+}
+
+.contenedor {
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+.form-control {
+    margin-bottom: 10px;
+    color: #003049;
+    margin-left: 20%; /* Ajustar este valor para mover más hacia la izquierda */
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    color: #780000;
+    margin-left: 0; /* Ajustar este valor para alinear las etiquetas */
+}
+
+.input-search {
+    width: auto;
+    padding: 8px;
+    border: 2px solid #003049;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Botón */
+.btn-event {
+    background-color: #007bff;
+    color: #fdf0d5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 70%; /* Ajustar este valor para mover el botón hacia la izquierda */
+    margin-top: 20px;
+    
+}
+
+.btn-event:hover {
+    background-color: #0056b3;
+}
+
+/* Botón */
+.btn-search {
+    background-color: #007bff;
+    color: #fdf0d5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 70%; /* Ajustar este valor para mover el botón hacia la izquierda */
+
+}
+
+.btn-search:hover {
+    background-color: #0056b3;
+}
+
+.btn-search img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #E5E5E5;
+    color: #457B9D;
+    font-weight: bold;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #134074;
+    color: #E5E5E5;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (tablets) */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 1.5rem;
+    }
+    
+    .form-control {
+        margin-left: 10%;
+    }
+
+    .btn-event, .btn-search {
+        margin-left: 50%;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .titulo img {
+        width: 60px;
+    }
+    
+    .form-control {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .input-search {
+        width: 100%;
+    }
+
+    .btn-event, .btn-search {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Pantallas grandes (desktops grandes) */
+@media (min-width: 1200px) {
+    .titulo {
+        font-size: 2.5rem;
+    }
+
+    .btn-event, .btn-search {
+        margin-left: 40%;
+    }
+}

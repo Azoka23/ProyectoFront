@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boleteria Digital</title>
-    <link rel="shortcut icon" href="Static/imagenes/cinema_12223.ico">
-    <link rel="stylesheet" href="Static/Css/homeWorkStyle.css">
+    <link rel="shortcut icon" href="/Templates/homeWork.html">
+    <link rel="stylesheet" href="/Static/Css/homeWorkStyle.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 
@@ -22,7 +22,7 @@
                 <div class="usuario-container">
                     <!-- Aquí mostraremos el icono de usuario -->
                     <div id="icono-usuario" class="icono-usuario hidden">
-                        <img src="Static/Imagenes/avatardefault_92824.ico" alt="Icono Usuario">
+                        <img src="/Static/Imagenes/avatardefault_92824.ico" alt="Icono Usuario">
                     </div>
                     <!-- Aquí mostraremos el nombre de usuario -->
                     <div id="nombre-usuario" class="nombre-usuario"></div>
@@ -38,7 +38,7 @@
 
                 
                 <div class="titulo" >
-                    <img src="Static/Imagenes/Imagenes/BoleteriaDigital_logo.jpeg" alt="Icono">
+                    <img src="/Static/Imagenes/Imagenes/BoleteriaDigital_logo.jpeg" alt="Icono">
                     <h1>Boleteria Digital</h1>
                     <div id="fecha" >  </div>
                     </div>
@@ -57,24 +57,28 @@
                 <select id="event" name="event">
                     <option value="evento1">Musicales</option>
                     <option value="evento2">Teatro</option>
-                    <option value="evento3">Todos</option>
+                    <option value="evento3">Cine</option>
+                    <option value="evento4" selected>Todos</option>
                     <!-- <option value="evento3">Estelares</option> -->
                     <!-- Agrega más opciones según los eventos disponibles -->
                 </select>
-                <label for="quantity">Cantidad de tickets:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <!-- <label for="quantity">Cantidad de tickets:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1"> -->
                 <!-- <input type="submit" value="Comprar" class="boton-comprar"> -->
-                <button type="submit" id="comprar-btn">
+                <!-- <button type="submit" id="comprar-btn">
                     <img src="Static/Imagenes/diagram-61_24456.ico" alt="Carrito de compras">
-                </button>
+                </button> -->
                 
             </form>
-<br>
+<div class="realizarCompra">
+            <a href="/Templates/ventas.html">Realizar Compra</a>
+        </div>
+            <br>
             <!-- Agrega el contador de tickets vendidos -->
-<div id="contador-tickets">
+<!-- <div id="contador-tickets">
     <h3>Tickets Vendidos Hoy:</h3>
     <p id="numero-tickets">0</p>
-</div>
+</div> -->
         </div>
         
 
@@ -105,20 +109,20 @@
             <div class="evento">
                 <h3>Musical</h3>
                 <p>Kevin Johansen</p>
-                <img src="./Static/Imagenes/recitales/kevjohansen960.png" alt="Evento 3"> 
+                <img src="/Static/Imagenes/recitales/kevjohansen960.png" alt="Evento 3"> 
                 
                 <p>Precio: $4500</p>
             </div>
             <div class="evento">
                 <h3>Musical</h3>
                 <p>Dalila</p>
-                <img src="./Static/Imagenes/recitales/dalila_s.png"" alt="Evento 4"> 
+                <img src="/Static/Imagenes/recitales/dalila_s.png"" alt="Evento 4"> 
                 <p>Precio: $4000</p>
             </div>
             <div class="evento">
                 <h3>Musical</h3>
                 <p>Ciro</p>
-                <img src="./Static/Imagenes/recitales/cirostafenew960.png"" alt="evento 5">
+                <img src="/Static/Imagenes/recitales/cirostafenew960.png"" alt="evento 5">
                 <p>Precio: $6000</p>
             </div>
         </div>
@@ -161,20 +165,30 @@
     </section>
 
     <!--  script que maneja la funcionalidad de mostrar el nombre de usuario y el icono -->
-    <script src="Static/Js/nombreUsuario.js"></script>
+    <script src="/Static/Js/nombreUsuario.js"></script>
 
 
+
+    <script>
+        // Almacenar información sobre el evento seleccionado
+        var tituloEvento = "Divididos"; // Cambia esto por el título del evento real
+        var precioEvento = 5000; // Cambia esto por el precio real del evento
+        localStorage.setItem('tituloEvento', tituloEvento);
+        localStorage.setItem('precioEvento', precioEvento);
+    </script>
 
 <!-- script para mostar la fecha actualizada -->
 
-
-<script src="Static/js/fechaActual.js"></script>
+<script src="/Static/js/fechaActual.js"></script>
 
 <!-- contadorTickets -->
 
-<script src="Static/js/contadorTickets.js"></script>
+<!-- <script src="/Templates/index.html"></script> -->
 
-<script src="Static/js/escucharOpcion.js"></script>
+<script src="/Static/js/escucharOpcion.js"></script>
+
+
+
 </body>
 
 </html>

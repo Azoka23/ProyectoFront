@@ -3,8 +3,6 @@ function validarInicioSesion(event) {
     // Evitar que el formulario se envíe automáticamente
     event.preventDefault();
 
-    // console.log('Iniciando validación de inicio de sesión...');
-
     // Obtener los valores de usuario y contraseña del formulario
     var usernameInput = document.getElementById('username');
     var passwordInput = document.getElementById('password');
@@ -17,38 +15,19 @@ function validarInicioSesion(event) {
         return;
     }
 
-    // Supongamos que el usuario y la contraseña válidos son 'usuario' y 'contraseña'
+    // Redireccionar según el usuario y la contraseña ingresados
     if (username === 'Fran' && password === '1234') {
-        // Usuario y contraseña válidos
-        // alert('Inicio de sesión exitoso');
-
-        // Almacenar información del usuario en el almacenamiento local
-        localStorage.setItem('usuarioValidado','Bienvenido ' + username);
-
-        // Mostrar el nombre de usuario y el icono
-        var nombreUsuarioElement = document.getElementById('nombre-usuario');
-        if (nombreUsuarioElement) {
-            nombreUsuarioElement.textContent =  username;
-        }
-
-        var iconoUsuarioElement = document.getElementById('icono-usuario');
-        if (iconoUsuarioElement) {
-            iconoUsuarioElement.classList.remove('hidden');
-        }
-
-        // Ocultar el botón de inicio de sesión
-        var botonContainer = document.querySelector('.boton-container');
-        if (botonContainer) {
-            botonContainer.style.display = 'none';
-        }
-
-        // Redireccionar a la página principal (homeGrid.html)
+        // Redirigir a homeWork.html
         window.location.href = '/homeWork.html';
+    } else if (username === 'messi' && password === '10') {
+        // Redirigir a crud-usuarios.html
+        window.location.href = '/templates/crud-usuarios.html';
     } else {
         // Usuario o contraseña incorrectos
         alert('Usuario o contraseña incorrectos');
-        // Limpiar los campos de usuario y contraseña
-        // ...
+        // Limpiar los campos de usuario y contraseña si es necesario
+        usernameInput.value = '';
+        passwordInput.value = '';
     }
 }
 

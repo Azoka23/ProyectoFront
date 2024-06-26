@@ -1,103 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <!-- Enlace a la hoja de estilos para el registro -->
     <link rel="stylesheet" href="/Static/Css/registerStyle.css">
-    <!-- Enlace a la fuente Roboto desde Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
-
 <body>
     <header>
-        <!-- Encabezado con título -->
         <nav>
-            <h1> Registro de usuario </h1>
+            <h1>Registro de usuario</h1>
         </nav>
-        <!-- Botón para volver al inicio -->
         <div class="boton-inicio">
-            <a href="/index.html">
-                <input type="submit" value=" Volver Inicio " class="boton-home">
-            </a>
+            <a href="/index.html" class="boton-home">Volver al Inicio</a>
         </div>
     </header>
     <main>
-        <!-- Formulario de registro -->
         <section id="register-form">
-            <form action="/Templates/guardaForm.html" method="get" id="register-form" novalidate>
-                <!-- Campo de apellido -->
+            <form id="registerForm" novalidate>
                 <div>
-                    <label for="">Apellido</label>
-                    <input type="text" name="lasttname" id="apellido">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido">
                     <div id="error-apellido" class="error-message" style="color: red;"></div>
                 </div>
-                <!-- Campo de nombre -->
                 <div>
-                    <label for="">Nombre</label>
-                    <input type="text" name="firstname" id="nombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
                     <div id="error-nombre" class="error-message" style="color: red;"></div>
                 </div>
-                <!-- Campo de fecha de nacimiento -->
                 <div>
-                    <label for="">Fecha de nacimiento</label>
-                    <input type="date" name="birthdayDate" id="fecha de nacimiento">
-                    <div id="error-fecha de nacimiento" class="error-message" style="color: red;"></div>
+                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fecha-nacimiento" name="fechaNacimiento">
+                    <div id="error-fecha-nacimiento" class="error-message" style="color: red;"></div>
                 </div>
-                <!-- Campo de documento -->
                 <div>
-                    <label for="">Documento </label>
-                    <input type="number" name="id" id="documento">
+                    <label for="documento">Documento </label>
+                    <input type="number" id="documento" name="documento">
                     <div id="error-documento" class="error-message" style="color: red;"></div>
                 </div>
-                <!-- Campo de teléfono -->
                 <div>
-                    <label for="">Telefono</label>
-                    <input type="number" name="phone" id="telefono">
+                    <label for="telefono">Telefono</label>
+                    <input type="number" id="telefono" name="telefono">
                     <div id="error-telefono" class="error-message" style="color: red;"></div>
                 </div>
-                <!-- Campo de correo electrónico -->
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" id="email" name="email">
                     <div id="error-email" class="error-message" style="color: red;"></div>
                 </div>
-                <!-- Campo de país de origen -->
                 <div>
-                    <label for="country">País de origen</label>
-                    <select name="country" id="pais de origen">
-                        <!-- Opciones de países -->
-                        <option value="">seleccione</option>
+                    <label for="pais-origen">País de origen</label>
+                    <select id="pais-origen" name="paisOrigen">
+                        <option value="">Seleccione</option>
                         <option value="Ar">Argentina</option>
                         <option value="Bo">Bolivia</option>
                         <option value="Uy">Uruguay</option>
-                        <option value="Pe">Peru</option>
+                        <option value="Pe">Perú</option>
                         <option value="Br">Brasil</option>
                     </select>
-                    <div id="error-pais de origen" class="error-message" style="color: red;"></div>
+                    <div id="error-pais-origen" class="error-message" style="color: red;"></div>
                 </div>
-                <!-- Campo de contraseña -->
                 <div>
-                    <label for="">Contraseña</label>
-                    <input type="password" name="contraseña" id="contraseña">
-                    <div id="error-contraseña" class="error-message" style="color: red;"></div>
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password">
+                    <div id="error-password" class="error-message" style="color: red;"></div>
                 </div>
-                <!-- Checkbox para aceptar términos y condiciones -->
                 <div>
                     <br>
-                    <input type="checkbox" id="terms-checkbox" name="terms-checkbox" required>
+                    <input type="checkbox" id="terms-checkbox" name="terms" required>
                     <label for="terms-checkbox">Acepto los términos y condiciones</label>
                     <div id="error-message" style="color: red;"></div>
                 </div>
-                <!-- Botón de envío del formulario -->
-                <input type="submit" value="Registrarse" class="sumbit-buttom">
+                <button class="btn-event" type="button" id="btn-save-user" onclick="saveUser()">Guardar</button>
             </form>
         </section>
     </main>
-    <!-- Script para validar los campos del formulario -->
-    <script src="Static/Js/validacionCampos.js"></script>
-</body>
+    <script src="/Static/Js/validacionCampos.js"></script>
+    <script src="/Static/Js/crud-usuarios-fetch.js"></script>
+    <script>
+        async function saveUser() {
+            const apellido = document.getElementById('apellido').value;
+            const nombre = document.getElementById('nombre').value;
+            const fechaNacimiento = document.getElementById('fecha-nacimiento').value;
+            const documento = document.getElementById('documento').value;
+            const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value;
+            const pais = document.getElementById('pais-origen').value;
+            const password = document.getElementById('password').value;
 
+            if (!apellido || !nombre || !fechaNacimiento || !documento || !telefono || !email || !pais || !password) {
+                alert('Por favor complete todos los campos.');
+                return;
+            }
+
+            const userData = {
+                apellido: apellido,
+                nombre: nombre,
+                fecha_nacimiento: fechaNacimiento,
+                documento: documento,
+                telefono: telefono,
+                email: email,
+                pais_origen: pais,
+                password: password
+            };
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/api/usuarios/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userData)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                alert('Registro exitoso');
+                document.getElementById('registerForm').reset(); // Limpiar campos del formulario
+                window.location.href = '/index.html'; // Redirigir a la página de inicio
+            } catch (error) {
+                console.error('Error al registrar usuario:', error);
+                alert('Error al registrar usuario');
+            }
+        }
+    </script>
+</body>
 </html>

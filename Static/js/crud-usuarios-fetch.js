@@ -50,10 +50,15 @@ async function fetchUsers() {
                         <td>${user.email}</td>
                         <td>${user.pais_origen}</td>
                         <td>${user.password}</td>
-                        <td>
-                            <button onclick="editUser(${user.id_usuario})">Editar</button>
-                            <button onclick="deleteUser(${user.id_usuario})">Eliminar</button>
-                        </td>
+                       <td>
+    <button onclick="editUser(${user.id_usuario})">
+        <img src="/Static/Imagenes/editar2.png" alt="Editar" style="width:20px;height:20px;">
+    </button>
+    <button onclick="deleteUser(${user.id_usuario})">
+        <img src="/Static/Imagenes/bin_trash_delete_remove_recycle_icon_146878.png" alt="Eliminar" style="width:20px;height:20px;">
+    </button>
+</td>
+
                     </tr>
                 `;
                 tableBody.insertAdjacentHTML('beforeend', row);
@@ -119,16 +124,51 @@ async function saveUser() {
 /**
  * Función para eliminar un usuario.
  */
+//async function deleteUser(id) {
+    //aca poner el sweet alert
+   // if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
+    //    try {
+    //        await fetchData(`${BASEURL}/api/usuarios/${id}`, 'DELETE');
+    //        fetchUsers();
+    //    } catch (error) {
+     //       console.error('Error deleting user:', error);
+     //   }
+    //}
+//}
+
 async function deleteUser(id) {
-    if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
+    // Usa SweetAlert para confirmar la eliminación
+    const result = await Swal.fire({
+        title: '¿Estás seguro?',
+        text: "¡No podrás revertir esto!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminarlo!',
+        cancelButtonText: 'Cancelar'
+    });
+
+    if (result.isConfirmed) {
         try {
             await fetchData(`${BASEURL}/api/usuarios/${id}`, 'DELETE');
             fetchUsers();
+            Swal.fire(
+                'Eliminado!',
+                'El usuario ha sido eliminado.',
+                'success'
+            );
         } catch (error) {
             console.error('Error deleting user:', error);
+            Swal.fire(
+                'Error!',
+                'Hubo un problema al eliminar el usuario.',
+                'error'
+            );
         }
     }
 }
+
 
 /**
  * Función para editar un usuario.

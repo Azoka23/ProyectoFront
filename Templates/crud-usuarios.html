@@ -26,7 +26,7 @@
             <h2 class="search-title">Gestión de usuarios</h2>
             <form id="form-user" novalidate>
                 <!-- Campo oculto para almacenar el ID del usuario -->
-                <input type="hidden" id="id-usuario" name="idUsuario">
+                <!-- <input type="hidden" id="id-usuario" name="idUsuario"> --> 
                 <div class="d-flex">
                     <div class="form-control d-flex-column">
                         <label for="apellido">Apellido</label>
@@ -65,7 +65,14 @@
                     <button class="btn-search" type="button" id="btn-search" onclick="fetchUsers()">
                         <img src="/Static/imagenes/search_find_lupa_21889.png" alt="Buscar" class="icon-search">Buscar
                     </button>
-                    <button class="btn-event" type="button" id="btn-save-user" onclick="saveUser()">Guardar</button>
+                    <input type="hidden" id="id-usuario" name="idUsuario"> 
+                     <button class="btn-event" type="button" id="btn-save-user" onclick="saveUser()">Guardar</button>  
+                    
+                     <!-- <button type="button" onclick="saveUser()">Guardar</button> -->
+
+                    
+                     <!-- <input type="hidden"  name="id_usuario" id="id-usuario">
+                    <button class="btn-event" type="button" id="btn-save-usuario">Agregar</button> -->
                 </div>
             </form>
         </section>
@@ -112,8 +119,10 @@
         });
     </script>
     <!-- Script para mostrar la fecha actualizada -->
-    <script src="/Static/js/fechaActual.js"></script>
+    
     <!-- Importa el archivo de funciones para CRUD de usuarios -->
     <script src="/Static/js/crud-usuarios-fetch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="/Static/js/fechaActual.js"></script> -->
 </body>
 </html>

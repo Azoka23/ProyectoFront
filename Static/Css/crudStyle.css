@@ -125,6 +125,7 @@ p {
     height: 20px;
 }
 
+
 .boton-home{
     /* Estilos del botón */
     padding: 8px 16px;
@@ -147,8 +148,6 @@ p {
     background-color: #457B9D;
     border: 2px solid #003049;
 } 
-.footer{
-
 
 /* Tabla */
 .table {

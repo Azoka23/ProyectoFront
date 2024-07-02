@@ -9,6 +9,8 @@ body {
     background-image: url("/Static/imagenes/cultural.jpg");
     background-repeat: no-repeat; /* No se repite la imagen */
     background-size: cover; /* La imagen se ajusta para cubrir el fondo */
+    background-position: center;
+    margin-top: 0;
     width: 100%; /* Ancho completo */
     /* Color de fondo con transparencia */
     background-color: rgba(253, 240, 213, 0.8);  
@@ -122,6 +124,31 @@ p {
     width: 20px;
     height: 20px;
 }
+
+.boton-home{
+    /* Estilos del botón */
+    padding: 8px 16px;
+    background-color: #669BBC;
+    /* color: #FDF0D5; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    /* transition: transform 0.3s;  */
+
+    /* Estilos adicionales para la animación */
+    display: inline-block;
+    text-decoration: none;
+}
+/* Regla para la animación al pasar el mouse */
+.boton-home:hover { 
+    /* transform: scale(1.1);   
+    background-color: #003049;  */
+    background-color: #457B9D;
+    border: 2px solid #003049;
+} 
+.footer{
+
 
 /* Tabla */
 .table {

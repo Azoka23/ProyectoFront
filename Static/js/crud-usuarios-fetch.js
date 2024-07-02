@@ -29,6 +29,10 @@ async function fetchData(url, method, data = null) {
     }
 }
 
+
+
+
+
 /**
  * Función para obtener todos los usuarios.
  */
@@ -40,11 +44,13 @@ async function fetchUsers() {
             tableBody.innerHTML = '';
 
             users.forEach(user => {
+                const fechaNacimientoFormateada = convertirFechaCompleta(user.fecha_nacimiento);
+
                 const row = `
                     <tr>
                         <td>${user.nombre}</td>
                         <td>${user.apellido}</td>
-                        <td>${user.fecha_nacimiento}</td>
+                        <td>${fechaNacimientoFormateada}</td>
                         <td>${user.documento}</td>
                         <td>${user.telefono}</td>
                         <td>${user.email}</td>
@@ -121,20 +127,7 @@ async function saveUser() {
     }
 }
 
-/**
- * Función para eliminar un usuario.
- */
-//async function deleteUser(id) {
-    //aca poner el sweet alert
-   // if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
-    //    try {
-    //        await fetchData(`${BASEURL}/api/usuarios/${id}`, 'DELETE');
-    //        fetchUsers();
-    //    } catch (error) {
-     //       console.error('Error deleting user:', error);
-     //   }
-    //}
-//}
+
 
 async function deleteUser(id) {
     // Usa SweetAlert para confirmar la eliminación
@@ -176,12 +169,13 @@ async function deleteUser(id) {
 async function editUser(id) {
     try {
         const user = await fetchData(`${BASEURL}/api/usuarios/${id}`, 'GET');
+        const fechaNacimientoFormateada = convertirFechaCompleta(user.fecha_nacimiento);
         document.querySelector('#id-usuario').value = user.id_usuario;
         document.querySelector('#apellido').value = user.apellido;
         document.querySelector('#nombre').value = user.nombre;
         document.querySelector('#documento').value = user.documento;
         document.querySelector('#telefono').value = user.telefono;
-        document.querySelector('#fecha-nacimiento').value = user.fecha_nacimiento;
+        document.querySelector('#fecha-nacimiento').value = fechaNacimientoFormateada;
         document.querySelector('#email').value = user.email;
         document.querySelector('#pais-origen').value = user.pais_origen;
         document.querySelector('#password').value = user.password;
@@ -330,3 +324,16 @@ function displayUsers(users) {
         });
     }
 }
+
+// Función para convertir fecha de formato completo a YYYY-MM-DD
+function convertirFechaCompleta(fechaCompleta) {
+    const fecha = new Date(fechaCompleta);
+    const year = fecha.getFullYear();
+    const month = ('0' + (fecha.getMonth() + 1)).slice(-2); // Obtener mes (agregar 1 porque enero es 0)
+    const day = ('0' + (fecha.getDate()+1)).slice(-2); // Obtener día
+
+    // Construir la fecha en formato YYYY-MM-DD
+    const fechaFormateada = `${year}-${month}-${day}`;
+    return fechaFormateada;
+}
+
